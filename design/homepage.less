@@ -76,13 +76,13 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 h1 {
-  font-size: 36px;
+  font-size: 42px;
 }
 h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 h3 {
-  font-size: 24px;
+  font-size: 26px;
   a, a:hover {
     color: inherit;
   }
@@ -177,12 +177,13 @@ x-c {
 
 x-row {
   .make-row();
-  margin-left: -15px;
-  margin-right: -15px;
+  display: table;
+  width: 100%;
+  margin: 1em -15px;
   .clearfix;
 }
 
-x-col { dispcay: block; }
+x-col { display: block; }
 x-col[size="1"]  { .make-column(1); }
 x-col[size="2"]  { .make-column(2); }
 x-col[size="3"]  { .make-column(3); }
@@ -300,11 +301,16 @@ nav {
     display: inline-block;
     margin: 0;
     padding: 0 5px;
-    a {
+    a:hover {
+      text-decoration: none;
     }
     small {
       display: block;
       border-top: 1px solid;
+      .transition;
+    }
+    &:hover small {
+      border-top-color: @black;
     }
   }
 }
@@ -321,8 +327,11 @@ header {
 }
 
 // Portfolio
-#portfolio {
-
+x-card {
+  background: white;
+  color: black;
+  padding: 8px;
+  display: block;
 }
 
 // Footer
@@ -379,6 +388,20 @@ footer {
     visibility: hidden;
     display: none;
   }
+
+  // Rows
+  x-col[size="1"]  { .make-column(12); }
+  x-col[size="2"]  { .make-column(12); }
+  x-col[size="3"]  { .make-column(12); }
+  x-col[size="4"]  { .make-column(12); }
+  x-col[size="5"]  { .make-column(12); }
+  x-col[size="6"]  { .make-column(12); }
+  x-col[size="7"]  { .make-column(12); }
+  x-col[size="8"]  { .make-column(12); }
+  x-col[size="9"]  { .make-column(12); }
+  x-col[size="10"] { .make-column(12); }
+  x-col[size="11"] { .make-column(12); }
+  x-col[size="12"] { .make-column(12); }
 
   // Header
   h1 {
