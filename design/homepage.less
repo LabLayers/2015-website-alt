@@ -21,8 +21,8 @@ body {
   padding: 0;
   font-family: @font-family-sans-serif;
   background: white;
-  background: @yellow;
-  color: @black;
+  background: #DDD0B7;
+  color: black;
   font-size: 18px;
   line-height: 22px;
   background-attachment: fixed;
@@ -31,8 +31,8 @@ body {
   height: 100%!important;
   width: 100%;
   text-align: left;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
 }
 
 .wrap {
@@ -76,14 +76,13 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 h1 {
-  font-size: 44px;
-  font-size: 52px;
+  font-size: 36px;
 }
 h2 {
-  font-size: 32px;
+  font-size: 28px;
 }
 h3 {
-  font-size: 32px;
+  font-size: 24px;
   a, a:hover {
     color: inherit;
   }
@@ -161,7 +160,8 @@ pre {
 }
 
 // Super simple grid
-.container {
+x-c {
+  display: block;
   width: 100%;
   max-width: @grid-float-breakpoint;
   margin: auto;
@@ -175,32 +175,26 @@ pre {
   .clearfix;
 }
 
-.row {
+row {
   .make-row();
   margin-left: -10px;
   margin-right: -10px;
   .clearfix;
 }
 
-.hull {
-  .container;
-  .stern {
-    .row;
-  }
-}
-
-.col-1 , .col-md-1  { .make-column(1); }
-.col-2 , .col-md-2  { .make-column(2); }
-.col-3 , .col-md-3  { .make-column(3); }
-.col-4 , .col-md-4  { .make-column(4); }
-.col-5 , .col-md-5  { .make-column(5); }
-.col-6 , .col-md-6  { .make-column(6); }
-.col-7 , .col-md-7  { .make-column(7); }
-.col-8 , .col-md-8  { .make-column(8); }
-.col-9 , .col-md-9  { .make-column(9); }
-.col-10, .col-md-10 { .make-column(10); }
-.col-11, .col-md-11 { .make-column(11); }
-.col-12, .col-md-12 { .make-column(12); }
+x-col { dispcay: block; }
+x-col[size="1"]  { .make-column(1); }
+x-col[size="2"]  { .make-column(2); }
+x-col[size="3"]  { .make-column(3); }
+x-col[size="4"]  { .make-column(4); }
+x-col[size="5"]  { .make-column(5); }
+x-col[size="6"]  { .make-column(6); }
+x-col[size="7"]  { .make-column(7); }
+x-col[size="8"]  { .make-column(8); }
+x-col[size="9"]  { .make-column(9); }
+x-col[size="10"] { .make-column(10); }
+x-col[size="11"] { .make-column(11); }
+x-col[size="12"] { .make-column(12); }
 
 .pull-left { float: left; }
 .pull-center { margin: auto; }
@@ -291,12 +285,32 @@ section {
 
 // Navigation
 nav {
-
+  background: @seabreeze;
+  color: @white;
+  .brand {
+    display: inline-block;
+  }
+  menu {
+    display: inline-block;
+    float: right;
+  }
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 5px;
+    a {
+    }
+    small {
+      display: block;
+      border-top: 1px solid;
+    }
+  }
 }
 
 // Header
 header {
-
+  background: @seabreeze;
+  color: @white;
 }
 
 // TODO: Migrate .link to .button
