@@ -306,7 +306,7 @@ nav {
     }
     small {
       display: block;
-      border-top: 1px solid;
+      border-top: 2px solid;
       .transition;
     }
     &:hover small {
@@ -323,7 +323,7 @@ header {
 
 // Bam!
 .bam {
-  border-bottom: 1px solid;
+  border-bottom: 2px solid;
 }
 
 // Portfolio
@@ -332,6 +332,11 @@ x-card {
   color: black;
   padding: 8px;
   display: block;
+  cursor: pointer;
+  .transition;
+  &:hover {
+    outline: 2px solid black;
+  }
 }
 
 // Footer
