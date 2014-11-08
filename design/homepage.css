@@ -346,6 +346,7 @@ body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: white;
   background: #DDD0B7;
+  font-weight: normal;
   color: black;
   font-size: 18px;
   line-height: 22px;
@@ -355,6 +356,7 @@ body {
   height: 100%!important;
   width: 100%;
   text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 .wrap {
   max-width: 1200px;
@@ -390,6 +392,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: .15em 0;
   font-weight: bold;
   line-height: 1em;
@@ -763,30 +766,30 @@ section {
   align-items: center;
 }
 nav {
-  background: #77cca4;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 nav .brand {
   display: inline-block;
   font-size: 1.8em;
-  line-height: 2em;
+  line-height: 50px;
 }
 nav menu {
   display: inline-block;
   float: right;
+  margin: 0;
 }
 nav li {
   display: inline-block;
   margin: 0;
-  padding: 0 5px;
+  padding: 0;
+}
+nav li a {
+  line-height: 50px;
+  padding: 0 1em;
 }
 nav li a:hover {
   text-decoration: none;
-}
-nav li small {
-  display: block;
-  border-top: 2px solid;
-  transition: all 180ms linear;
 }
 nav li:hover small {
   border-top-color: #000000;

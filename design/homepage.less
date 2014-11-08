@@ -22,6 +22,7 @@ body {
   font-family: @font-family-sans-serif;
   background: white;
   background: #DDD0B7;
+  font-weight: normal;
   color: black;
   font-size: 18px;
   line-height: 22px;
@@ -32,7 +33,7 @@ body {
   width: 100%;
   text-align: left;
   // -moz-osx-font-smoothing: grayscale;
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrap {
@@ -70,6 +71,7 @@ img {
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-sans-serif;
   margin: .15em 0;
   font-weight: bold;
   line-height: 1em;
@@ -287,28 +289,28 @@ section {
 
 // Navigation
 nav {
-  background: @seabreeze;
-  color: @white;
+  background: @white;
+  color: @black;
   .brand {
     display: inline-block;
     font-size: 1.8em;
-    line-height: 2em;
+    line-height: 50px;
   }
   menu {
     display: inline-block;
     float: right;
+    margin: 0;
   }
   li {
     display: inline-block;
     margin: 0;
-    padding: 0 5px;
+    padding: 0;
+    a {
+      line-height: 50px;
+      padding: 0 1em;
+    }
     a:hover {
       text-decoration: none;
-    }
-    small {
-      display: block;
-      border-top: 2px solid;
-      .transition;
     }
     &:hover small {
       border-top-color: @black;
