@@ -1,6 +1,10 @@
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
+* {
+  padding: 0px;
+  margin: 0px;
+}
 /**
  * Correct `block` display not defined in IE 8/9.
  */
@@ -348,8 +352,8 @@ body {
   background: #DDD0B7;
   font-weight: normal;
   color: black;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 1.5em;
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
@@ -364,10 +368,10 @@ body {
   margin: auto;
 }
 a {
-  padding-top: 9px;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  vertical-align: middle;
 }
 a:hover {
   text-decoration: underline;
@@ -376,7 +380,7 @@ header,
 section,
 footer {
   position: relative;
-  padding: 30px 0;
+  padding: 50px 0;
   background-size: cover;
   background-position: middle;
   background-repeat: no-repeat;
@@ -766,8 +770,12 @@ section {
   align-items: center;
 }
 nav {
-  background: #ffffff;
-  color: #000000;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9001;
 }
 nav .brand {
   display: inline-block;
@@ -776,7 +784,6 @@ nav .brand {
 }
 nav menu {
   display: inline-block;
-  float: right;
   margin: 0;
 }
 nav li {
@@ -785,6 +792,7 @@ nav li {
   padding: 0;
 }
 nav li a {
+  display: inline-block;
   line-height: 50px;
   padding: 0 1em;
 }
@@ -797,6 +805,10 @@ nav li:hover small {
 header {
   background: #039997;
   color: #ffffff;
+  text-align: center;
+}
+header:first-of-type {
+  padding-top: 100px;
 }
 #stories a:hover {
   text-decoration: none;
