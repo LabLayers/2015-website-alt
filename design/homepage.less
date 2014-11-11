@@ -22,9 +22,10 @@ body {
   font-family: @font-family-sans-serif;
   background: white;
   background: #DDD0B7;
+  font-weight: normal;
   color: black;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 1.5em;
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
@@ -32,7 +33,7 @@ body {
   width: 100%;
   text-align: left;
   // -moz-osx-font-smoothing: grayscale;
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrap {
@@ -43,10 +44,11 @@ body {
 
 // Bangin' links
 a {
-  padding-top: 9px;
+  // padding-top: 9px;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  vertical-align: middle;
   &:hover {
     text-decoration: underline;
   }
@@ -55,7 +57,7 @@ a {
 // Layout
 header, section, footer {
   position: relative;
-  padding: 30px 0;
+  padding: 50px 0;
   background-size: cover;
   background-position: middle;
   background-repeat: no-repeat;
@@ -70,6 +72,7 @@ img {
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-sans-serif;
   margin: .15em 0;
   font-weight: bold;
   line-height: 1em;
@@ -95,6 +98,7 @@ h4 {
 p {
   // margin: 0 0 15px;
   line-height: 1.5em;
+
 }
 .lead {
   font-size: 1.5em;
@@ -287,28 +291,35 @@ section {
 
 // Navigation
 nav {
-  background: @seabreeze;
-  color: @white;
+  // background: @white;
+  // color: @black;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9001;
   .brand {
     display: inline-block;
     font-size: 1.8em;
-    line-height: 2em;
+    line-height: 50px;
   }
   menu {
     display: inline-block;
-    float: right;
+    // float: right;
+    margin: 0;
   }
   li {
     display: inline-block;
     margin: 0;
-    padding: 0 5px;
+    padding: 0;
+    a {
+      display: inline-block;
+      line-height: 50px;
+      padding: 0 1em;
+    }
     a:hover {
       text-decoration: none;
-    }
-    small {
-      display: block;
-      border-top: 2px solid;
-      .transition;
     }
     &:hover small {
       border-top-color: @black;
@@ -318,8 +329,12 @@ nav {
 
 // Header
 header {
-  background: @seabreeze;
+  background: @teal;
   color: @white;
+  text-align: center;
+  &:first-of-type {
+    padding-top: 100px;
+  }
 }
 
 // Stories

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Victor Lourng is Pure Awesome</title>
+  <title>Victor Lourng</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.5/css/material-wfont.min.css">
   <link rel="stylesheet" href="design/homepage.css">
 </head>
 <body>
@@ -10,70 +11,31 @@
 <nav>
   <!-- I know, these are web components! -->
   <x-c>
-    <a class="brand">
-      Victor Lourng
-    </a>
-    <menu>
-      <li>
-        <a href="#stories">
-          <small>1.</small>
-          Stories
-        </a>
-      </li>
-      <li>
-        <a href="#portfolio">
-          <small>2.</small>
-          Portfolio
-        </a>
-      </li>
+    <a class="name">
+      <i class="mdi-action-face-unlock"></i> &nbsp;&nbsp; <x-man>Victor Lourng</x-man>
+    </a><menu>
       <li>
         <a href="#about">
-          <small>3.</small>
           About
         </a>
-      </li>
-      <li>
+      </li><li>
+        <a href="#projects">
+          Projects
+        </a>
+      </li><li>
         <a href="#contact">
-          <small>4.</small>
           Contact
         </a>
       </li>
-
     </menu>
   </x-c>
 </nav>
 
 <header id="stories">
   <x-c>
-    <h1>I build stories that tell themselves.</h1>
+    <h1>I create amazing things for the world.</h1>
     <p>Presenting some of my latest projects:</p>
     <br>
-    <x-row>
-      <x-col size="4">
-        <a href="http://minorleaguehacking.com" target="_blank">
-          <x-card>
-            <h4>Minor League Hacking</h4>
-            Bringing programming competitions to high schoolers around the world
-          </x-card>
-        </a>
-      </x-col>
-      <x-col size="4">
-        <a href="http://everfreenw.com" target="_blank">
-          <x-card>
-            <h4>Everfree Northwest</h4>
-            Curating a digital experience for Seattle's largest MLP convention
-          </x-card>
-        </a>
-      </x-col>
-      <x-col size="4">
-      <a href="http://iliterobotics.org" target="_blank">
-        <x-card>
-          <h4>ILITE Robotics</h4>
-          Building award-winning websites for award-winning robotics teams across the world
-        </x-card>
-      </a>
-      </x-col>
-    </x-row>
   </x-c>
 </header>
 
@@ -110,6 +72,13 @@
   </x-c>
 </section>
 
+<header id="about">
+  <x-c>
+    <h1>I'm Victor.</h1>
+    <p>Presenting some of my latest projects:</p>
+    <br>
+  </x-c>
+</header>
 
 <section id="about">
   <x-c>
@@ -117,6 +86,22 @@
     <p>I'm that laser-eyed web unicorn secretly drafting hakurs for Zivtech, Booksmart.</p>
   </x-c>
 </section>
+
+<header id="everfreenw">
+  <x-c>
+    <h1>Everfree Northwest</h1>
+    <p>A digital experience for Seattle's largest cartoon horse convention.</p>
+    <br>
+  </x-c>
+</header>
+
+<header id="contact">
+  <x-c>
+    <h1>Say hai!</h1>
+    <p>Presenting some of my latest projects:</p>
+    <br>
+  </x-c>
+</header>
 
 <section id="contact">
   <x-c>
