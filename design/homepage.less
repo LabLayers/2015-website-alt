@@ -7,12 +7,12 @@
 }
 
 ::selection {
-  background: @brand;
+  background: @tan;
   color: @white;
 }
 
 ::-moz-selection {
-  background: @brand;
+  background: @tan;
   color: @white;
 }
 
@@ -173,6 +173,14 @@ x-c {
   .clearfix;
 }
 
+x-c[width="expanded"] {
+  max-width: @grid-float-breakpoint + 140px;
+}
+
+[position="relative"] {
+  position: relative;
+}
+
 .wrap {
   max-width: 1200px;
   margin: auto;
@@ -260,6 +268,11 @@ x-col[size="12"] { .make-column(12); }
   }
 }
 
+.clickable {
+  .button;
+  .button-fill(@violet, white);
+}
+
 // Transitions
 .transition {
   transition: all 180ms linear;
@@ -293,21 +306,50 @@ section {
 nav {
   // background: @white;
   // color: @black;
+  background: rgba(0,0,0,.5);
   color: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9001;
+  .name {
+    background: @red;
+    top: 0;
+    left: 0;
+    padding: 0.5em 0.5em 0.35em 0.5em;
+    margin: -0.15em 0;
+    font-size: 30px;
+    display: inline-block;
+    .transition;
+  }
+  span.me {
+    &:hover .name {
+      text-decoration: none;
+      background: lighten(@red, 5%);
+      margin-top: 0;
+      margin: -0.25em 0 -0.35em 0;
+    }
+    &:active .name {
+      background: darken(@red, 15%);
+    }
+  }
+  /* Alt Storyline
   .brand {
     display: inline-block;
     font-size: 1.8em;
     line-height: 50px;
+  } */
+  x-man {
+    font-weight: bold;
   }
   menu {
     display: inline-block;
     // float: right;
     margin: 0;
+    &.right {
+      float: right;
+    }
   }
   li {
     display: inline-block;
@@ -321,9 +363,9 @@ nav {
     a:hover {
       text-decoration: none;
     }
-    &:hover small {
-      border-top-color: @black;
-    }
+  }
+  .twitter {
+    color: @twitter;
   }
 }
 
@@ -337,8 +379,36 @@ header {
   }
 }
 
+// Homepage
+#masthead {
+  height: 90vh;
+  min-height: 500px;
+  display: flex;
+  background: @violet;
+}
+
+x-showcase {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 50vh;
+  min-height: 300px;
+  .macbook {
+    display: inline-block;
+    padding: 50px;
+    border-radius: 16px;
+    border: 3px solid white;
+  }
+}
+
 // Stories
 #stories {
+  background-image: url(/images/hero_test.png);
+  background-size: cover;
+  position: relative;
+  color: white;
+  padding: 10em 0;
   a:hover {
     text-decoration: none;
   }
@@ -388,6 +458,7 @@ x-card {
 footer {
   background: @brown;
   color: @white;
+  padding: 1em 0;
 }
 
 // TODO: Migrate .link to .button

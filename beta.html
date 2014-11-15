@@ -3,33 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Victor Lourng</title>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.5/css/material-wfont.min.css">
   <link rel="stylesheet" href="design/homepage.css">
+  <link rel="stylesheet" href="icons/style.css">
 </head>
 <body>
 
 <nav>
   <!-- I know, these are web components! -->
-  <x-c>
-    <a class="name">
-      <i class="mdi-action-face-unlock"></i> &nbsp;&nbsp; <x-man>Victor Lourng</x-man>
-    </a><menu>
+  <x-c width="expanded" position="relative">
+    <span class="me"><a class="name"><i class="icon-emo-grin"></i></a><menu>
       <li>
         <a href="#about">
+          <x-man>Victor Lourng</x-man>
+        </a>
+      </li>
+    </menu></span><menu class="project">
+      <li>
+        <i class="mdi-navigation-chevron-right"></i>
+      </li><li>
+        <a href="#top">
+          Home
+        </a>
+      </li>
+    </menu><menu class="right">
+      <li>
+        <a href="#projects">
           About
         </a>
       </li><li>
-        <a href="#projects">
+        <a href="#contact">
           Projects
         </a>
       </li><li>
         <a href="#contact">
           Contact
         </a>
+      </li><li class="twitter">
+        <a href="http://twitter.com/lablayers" target="_blank">
+          <i class="icon-twitter"></i>
+        </a>
       </li>
     </menu>
   </x-c>
 </nav>
+
+<header id="masthead">
+  <x-c>
+    <h1>I make dreams come true.</h1>
+    <p class="lead">I'm an awesome web developer based in Philadelphia.</p>
+    <br>
+    <a href="#" class="clickable">Learn More</a>
+    <x-showcase>
+      <div class="macbook">
+        <img src="http://placehold.it/800x600" alt="">
+      </div>
+    </x-showcase>
+  </x-c>
+</header>
 
 <header id="stories">
   <x-c>
@@ -74,7 +104,7 @@
 
 <header id="about">
   <x-c>
-    <h1>I'm Victor.</h1>
+    <h1>My name is Victor Lourng.</h1>
     <p>Presenting some of my latest projects:</p>
     <br>
   </x-c>
@@ -83,7 +113,18 @@
 <section id="about">
   <x-c>
     <h1 class="bam">The Victor</h1>
-    <p>I'm that laser-eyed web unicorn secretly drafting hakurs for Zivtech, Booksmart.</p>
+    <x-row>
+      <x-col size="9">
+      <p>
+        A little about me I'm a well-seasoned and award-winning high school student — a enthusiast passionate about making things awesome. I’ve made it to international robotics competitions, regional science fairs, epic college hackathons, and huge comic conventions. I’ve built and managed startups from ideas, websites from scratch, and art from pure nothingness. I’m on a quest for world domination, one small thing at a time.
+      </p>
+      <p>
+        I'm that laser-eyed web unicorn secretly drafting haikus for Zivtech, Booksmart.
+      </p>
+      </x-col>
+      <x-col size="3">
+      </x-col>
+    </x-row>
   </x-c>
 </section>
 
@@ -110,14 +151,16 @@
   </x-c>
 </section>
 
-
 <footer>
   <x-c>
     <x-row>
-      <x-col size="9">
+      <x-col size="5">
         <p>Crafted with <span title="love">&lt;3</span> in Philadelphia. Let there be belles and whistles!</p>
       </x-col>
-      <x-col size="3" class="text-right">
+      <x-col size="2">
+        UNICORNS
+      </x-col>      
+      <x-col size="5" class="text-right">
         <p><a href="#top">Back to Top</a></p>
       </x-col>
     </x-row>
