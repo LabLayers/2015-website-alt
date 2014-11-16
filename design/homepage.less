@@ -169,7 +169,7 @@ x-c {
   width: 100%;
   max-width: @grid-float-breakpoint;
   margin: auto;
-  padding: 0 10px;
+  padding: 0 1em;
   .clearfix;
 }
 
@@ -191,7 +191,8 @@ x-row {
   .make-row();
   display: table;
   width: 100%;
-  margin: 1em -15px;
+  margin: auto;
+  // margin: 1em -15px;
   .clearfix;
 }
 
@@ -235,16 +236,21 @@ x-col[size="12"] { .make-column(12); }
   background-color: @gray;
   border-radius: 6px;
   // box-shadow: rgba(255, 255, 255, 0.29) 0 1px 0 0 inset, rgba(0, 0, 0, 0.27) 0 2px 11px 0;
-  transition: background-color 300ms ease, color 300ms ease, outline 300ms ease;
+  transition: all 300ms ease;
   color: white;
   font-size: 1em;
   text-align: center;
   text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
   &:hover {
     color: white;
     text-decoration: none;
     background-color: @gray;
     transition-delay: initial;
+  }
+  &:focus {
+    outline: 2px solid @blue;
   }
 }
 
@@ -283,6 +289,14 @@ x-col[size="12"] { .make-column(12); }
   }
   &.dribbbly {
     // .button-outline(@white, #ea4c89);
+  }
+  &:hover {
+    box-shadow: 0 1px 5px rgba(100,100,100,.5);
+    transform: translateY(-1px);
+  }
+  &:active {
+    box-shadow: 0 5px 10px rgba(100,100,100,.9);
+    transform: translateY(-5px);
   }
 }
 
@@ -413,9 +427,10 @@ nav {
   .dribbble {
     color: @dribbble;
   }
+  // Glow effect
   &:before {
     content: ' ';
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.7);
     -webkit-filter: blur(50px);
     -moz-filter: blur(50px);
     -o-filter: blur(50px);
@@ -426,8 +441,8 @@ nav {
     left: 0;
     width: 100%;
     height: 50px;
-    z-index: 9001;
     z-index: 0;
+    transform: translateZ(0px);
   }
 }
 
@@ -450,7 +465,8 @@ header {
   min-height: 750px;
   padding-bottom: 500px;
   display: flex;
-  background: @violet;
+  background-color: @violet;
+  background-image: radial-gradient(lighten(@violet,20%), @violet);
   overflow: hidden;
   .clicky {
     .button-fill(@violet, white);
@@ -495,6 +511,24 @@ x-showcase {
   padding: 10em 0;
   a:hover {
     text-decoration: none;
+  }
+}
+
+// Project Navigation
+.project-nav {
+  padding: 0 0;
+  .prev, .next {
+    // display: flex;
+    // width: 50%;
+    x-col {
+      padding: 50px 0;
+    }
+  }
+  .prev {
+    text-align: left;
+  }
+  .next {
+    text-align: right;
   }
 }
 
@@ -558,12 +592,16 @@ x-card {
   &#masthead {
     display: block;
     padding-bottom: 0;
+    min-height: 850px;
     x-c {
       background-image: url(/images/pixel-wave.png);
       background-position: center bottom;
       background-repeat: no-repeat;
       background-size: contain;
       height: 100%;
+    }
+    p.lead {
+      margin-bottom: 230px;
     }
     .clicky {
       .button-fill(white, black);
@@ -574,6 +612,7 @@ x-card {
   }
   &#form {
     padding: 0;
+    background: #7EE107;
     x-c {
       padding: 0px 2em 50px 2em;
       background: white;
@@ -603,7 +642,7 @@ x-card {
 footer {
   background: @brown;
   color: @white;
-  padding: 1em 0;
+  padding: 1.5em 0;
   .icon-heart {
     color: @pink;
   }
