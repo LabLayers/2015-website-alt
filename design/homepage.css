@@ -768,7 +768,6 @@ x-col[size="12"] {
   color: #ffffff;
   background: #b7023f;
   margin-right: 0.5em;
-  margin-bottom: 0.5em;
 }
 .clicky:hover {
   color: white;
@@ -836,6 +835,7 @@ nav .name {
   font-size: 30px;
   display: inline-block;
   transition: all 180ms linear;
+  translateZ: 0px;
 }
 nav span.me:hover .name {
   text-decoration: none;
@@ -869,6 +869,7 @@ nav li a {
 }
 nav li a:after {
   transition: all 90ms linear;
+  translateZ: 0px;
   position: absolute;
   content: ' ';
   bottom: 0;
@@ -882,7 +883,7 @@ nav li .active {
 }
 nav li a:hover:after,
 nav li .active:after {
-  border-bottom: 2px solid;
+  border-bottom: 4px solid;
 }
 nav .twitter a,
 nav .github a,
@@ -898,6 +899,22 @@ nav .github {
 nav .dribbble {
   color: #ea4c89;
 }
+nav:before {
+  content: ' ';
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 9001;
+  z-index: 0;
+}
 header {
   background: #039997;
   color: #ffffff;
@@ -910,8 +927,8 @@ header:first-of-type {
   padding-top: 100px;
 }
 #masthead {
-  eight: 95vh;
-  min-height: 700px;
+  height: 95vh;
+  min-height: 750px;
   padding-bottom: 500px;
   display: flex;
   background: #293258;
@@ -933,20 +950,28 @@ header:first-of-type {
   background: #293258;
   color: white;
 }
+#masthead h1 {
+  font-size: 72px;
+}
 x-showcase {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  max-height: 50vh;
-  min-height: 300px;
+  max-height: 52vh;
+  min-height: 400px;
 }
 x-showcase .macbook {
   display: inline-block;
-  padding: 50px;
+  padding: 40px;
   border-radius: 16px;
   border: 3px solid white;
-  background: rgba(50, 50, 50, 0.5);
+  background: rgba(150, 150, 150, 0.65);
+}
+x-showcase .macbook img {
+  width: 700px;
+  max-width: 100%;
+  border-radius: 2px;
 }
 #stories {
   background-image: url(/images/hero_test.png);
@@ -968,9 +993,33 @@ x-card {
   display: block;
   cursor: pointer;
   transition: all 180ms linear;
+  translateZ: 0px;
 }
 x-card:hover {
   outline: 4px solid black;
+}
+#prize {
+  text-align: center;
+  padding: 1em 0;
+  background: #ffc50f;
+  color: black;
+}
+#prize .clicky {
+  color: #ffffff;
+  background: #000000;
+  padding: 0.2em 0.5em;
+  vertical-align: baseline;
+  margin-left: .5em;
+}
+#prize .clicky:hover,
+#prize .clicky:focus,
+#prize .clicky.active {
+  background: #ffffff;
+  color: #000000;
+}
+#prize i.icon-large {
+  font-size: 3em;
+  vertical-align: middle;
 }
 .efnw#masthead {
   background: linear-gradient(to bottom, #85e6e8, #ffffff);
@@ -990,10 +1039,67 @@ x-card:hover {
 .efnw#masthead .clicky:hover {
   color: black;
 }
+.contact#masthead {
+  display: block;
+  padding-bottom: 0;
+}
+.contact#masthead x-c {
+  background-image: url(/images/pixel-wave.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+.contact#masthead .clicky {
+  background: #000000;
+  border: 2px solid #000000;
+  color: #ffffff;
+}
+.contact#masthead .clicky:hover,
+.contact#masthead .clicky:focus,
+.contact#masthead .clicky.active {
+  background: #ffffff;
+  color: white;
+}
+.contact#masthead .clicky:hover {
+  color: black;
+}
+.contact#form {
+  padding: 0;
+}
+.contact#form x-c {
+  padding: 0px 2em 50px 2em;
+  background: white;
+}
+.hackerchat#masthead {
+  background-color: #1F1F1F;
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/dark_matter.png);
+}
+.hackerchat#masthead .clicky {
+  background: #5a9570;
+  border: 2px solid #5a9570;
+  color: #ffffff;
+}
+.hackerchat#masthead .clicky:hover,
+.hackerchat#masthead .clicky:focus,
+.hackerchat#masthead .clicky.active {
+  background: #ffffff;
+  color: white;
+}
+.hackerchat#masthead .clicky:hover {
+  color: #5a9570;
+}
+.hackerchat.pitch {
+  background: #1F1F1F;
+  color: white;
+}
 footer {
   background: #4d3f32;
   color: #ffffff;
   padding: 1em 0;
+}
+footer .icon-heart {
+  color: #ff0086;
 }
 .visible-mobile,
 .hidden-desktop {
