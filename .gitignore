@@ -16,3 +16,7 @@ _site/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Mockup files
+.pxm
+.psd
