@@ -11,32 +11,32 @@
 <nav>
   <!-- I know, these are web components! -->
   <x-c width="expanded" position="relative">
-    <span class="me"><a class="name"><i class="icon-emo-grin"></i></a><menu>
+    <x-man><a class="name"><i class="icon-emo-grin"></i></a><menu>
       <li>
         <a href="#about">
-          <x-man>Victor Lourng</x-man>
+          Victor Lourng
         </a>
       </li>
-    </menu></span><menu class="project">
+    </menu></x-man><menu class="project">
       <li>
         <i class="mdi-navigation-chevron-right"></i>
       </li>
     </menu><menu class="right">
       <li>
         <a href="#top">
-          Hello.
+          Home
         </a>
       </li><li>
         <a href="#projects">
-          I'm Victor.
+          About
         </a>
       </li><li>
         <a href="#contact">
-          Projects.
+          Projects
         </a>
       </li><li>
         <a href="#contact">
-          Contact.
+          Contact
         </a>
       </li><li class="twitter">
         <a href="http://twitter.com/lablayers" target="_blank">
@@ -218,23 +218,17 @@
 </section>  
   
 <section class="project-nav">
-  <x-row>
-    <a href="/prev" class="prev"><x-col size="6">
-      <x-c>
+    <a href="/prev" class="prev">
         <i class="icon-left"></i>
-        <p>
           <strong>Prev Project</strong>
+          <p>Something
         </p>
-      </x-c>
-    </x-col></a><a href="/next" class="next"><x-col size="6">
-      <x-c>
+    </a><a href="/next" class="next">
         <i class="icon-right"></i>
-        <p>
           <strong>Next Project</strong>
+          <p>Fun Stuff
         </p>
-      </x-c>
-    </x-col></a>
-  </x-row>
+    </a>
 </section>
 
 

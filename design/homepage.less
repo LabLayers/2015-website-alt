@@ -353,32 +353,30 @@ nav {
     background: @red;
     top: 0;
     left: 0;
-    padding: 0.5em 0.5em 0.35em 0.5em;
-    margin: -0.15em 0;
+    padding: 1em 0.5em 0.35em 0.5em;
+    margin: -1.25em 0 -1em 0;
     font-size: 30px;
     display: inline-block;
     .transition;
   }
-  span.me {
+  x-man {
+    font-weight: bold;
     &:hover .name {
       text-decoration: none;
       background: lighten(@red, 5%);
       margin-top: 0;
-      margin: -0.25em 0 -0.35em 0;
+      margin: -0.75em 0 -1em 0;
     }
     &:active .name {
       background: darken(@red, 15%);
     }
   }
-  /* Alt Storyline
-  .brand {
-    display: inline-block;
-    font-size: 1.8em;
-    line-height: 50px;
-  } */
-  x-man {
-    font-weight: bold;
-  }
+  // Alt Storyline
+  // .brand {
+  //   display: inline-block;
+  //   font-size: 1.8em;
+  //   line-height: 50px;
+  // }
   menu {
     display: inline-block;
     // float: right;
@@ -400,16 +398,16 @@ nav {
         .transition-faster;
         position: absolute;
         content: ' ';
-        bottom: 0;
+        top: 0;
         left: 0;
         width: 100%;
-        border-bottom: 0px solid;
+        border-top: 0px solid;
       }
     }
     a:hover, .active {
       text-decoration: none;
       &:after {
-        border-bottom: 4px solid;
+        border-top: 4px solid;
       }
     }
   }
@@ -422,7 +420,7 @@ nav {
     color: @twitter;
   }
   .github {
-    color: @gray;
+    color: @white;
   }
   .dribbble {
     color: @dribbble;
@@ -430,7 +428,7 @@ nav {
   // Glow effect
   &:before {
     content: ' ';
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,1);
     -webkit-filter: blur(50px);
     -moz-filter: blur(50px);
     -o-filter: blur(50px);
@@ -463,18 +461,16 @@ header {
 #masthead {
   height: 95vh;
   min-height: 750px;
+  max-height: 900px;
   padding-bottom: 500px;
   display: flex;
   background-color: @violet;
   background-image: radial-gradient(lighten(@violet,20%), @violet);
   overflow: hidden;
   .clicky {
+    .clicky-large;
     .button-fill(@violet, white);
-    display: block;
-    min-width: 200px;
     width: 20%;
-    margin: 0px auto;
-    font-size: 1.2em;
   }
   h1 {
     font-size: 72px;
@@ -486,18 +482,33 @@ x-showcase {
   bottom: 0;
   left: 0;
   width: 100%;
-  max-height: 52vh;
+  height: 52vh;
   min-height: 400px;
+  max-height: 520px;
   .macbook {
     display: inline-block;
     padding: 40px;
     border-radius: 16px;
     border: 3px solid white;
     background: rgba(150,150,150,.65);
+    z-index: 1200;
+    position: relative;
     img {
       width: 700px;
       max-width: 100%;
       border-radius: 2px;
+    }
+    &.left {
+      position: absolute;
+      left: 0;
+      z-index: 1100;
+      transform: scale(0.8);
+    }
+    &.right {
+      position: absolute;
+      right: 0;
+      z-index: 1000;
+      transform: scale(0.8);
     }
   }
 }
@@ -517,18 +528,36 @@ x-showcase {
 // Project Navigation
 .project-nav {
   padding: 0 0;
+  a {
+    display: inline-block;
+    width: 50%;
+    padding: 50px 0;
+  }
   .prev, .next {
     // display: flex;
     // width: 50%;
     x-col {
-      padding: 50px 0;
+      position: relattive;
+    }
+    i {
+      position: absolute;
+      font-size: 2em;
+      vertical-align: middle;
     }
   }
   .prev {
     text-align: left;
+    padding-left: 2em;
+    i {
+      left: 0;
+    }
   }
   .next {
     text-align: right;
+    padding-right: 2em;
+    i {
+      right: 0;
+    }
   }
 }
 
