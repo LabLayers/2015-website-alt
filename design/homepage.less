@@ -21,7 +21,7 @@ body {
   padding: 0;
   font-family: @font-family-sans-serif;
   background: white;
-  background: #DDD0B7;
+  // background: #DDD0B7;
   font-weight: normal;
   color: black;
   font-size: 20px;
@@ -51,6 +51,17 @@ a {
   vertical-align: middle;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.underline {
+  border-bottom: 2px dotted;
+  &:hover {
+    border-bottom: 2px solid;
+    text-decoration: none;
+  }
+  &:active {
+    opacity: 0.8;
   }
 }
 
@@ -277,7 +288,7 @@ x-col[size="12"] { .make-column(12); }
 
 .clicky {
   .button;
-  .button-outline(@white, @red);
+  .button-outline(@white, @black);
   // border: none;
   margin-right: 0.5em;
   // margin-bottom: 0.5em;
@@ -298,6 +309,19 @@ x-col[size="12"] { .make-column(12); }
     box-shadow: 0 5px 10px rgba(100,100,100,.9);
     transform: translateY(-5px);
   }
+}
+
+.clicky-small {
+  padding: 0.2em 0.5em;
+  vertical-align: baseline;
+  margin-left: .5em;
+}
+
+.clicky-large {
+  display: block;
+  min-width: 200px;
+  margin: 0px auto;
+  font-size: 1.2em;
 }
 
 // Transitions
@@ -342,7 +366,7 @@ section {
 nav {
   // background: @white;
   // color: @black;
-  background: rgba(0,0,0,.5);
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0));
   color: white;
   position: fixed;
   top: 0;
@@ -579,6 +603,11 @@ x-card {
   }
 }
 
+// This is Victor
+#me {
+  background: @purple;
+}
+
 // About
 #about {
 
@@ -591,15 +620,19 @@ x-card {
   background: @yellow;
   color: black;
   .clicky {
-    .button-outline(@white, @black);
-    padding: 0.2em 0.5em;
-    vertical-align: baseline;
-    margin-left: .5em;
+    .clicky-small;
   }
   i.icon-large {
     font-size: 3em;
     vertical-align: middle;
    }
+}
+
+// Home
+.home {
+  &#masthead {
+    height: 100vh;
+  }
 }
 
 // EFNW
@@ -668,12 +701,51 @@ x-card {
 }
 
 // Footer
-footer {
-  background: @brown;
+footer#bottom {
+  background: #425059;
+  color: white;
+  .clicky {
+  // .clicky-small;
+    .clicky-large;
+    .button-fill(black, @yellow);
+    //margin: auto;
+    max-width: 300px;
+    &:hover {
+      color: black;
+      background: lighten(@yellow, 10%);
+    }
+    margin-right: 0;
+    margin-bottom: -1.2em;
+  }
+  .indecisiveness {
+    border-bottom: 2px dashed;
+    padding: 0 0.15em;
+  }
+}
+
+footer#classic {
+  position: relative;
+  background: #2E4347;
   color: @white;
   padding: 1.5em 0;
+  overflow: hidden;
+  .icon-network {
+    opacity: 0.15;
+    position: absolute;
+    font-size: 204px;
+    top: -20px;
+    left: 200px;
+    pointer-events: none;
+  }
   .icon-heart {
     color: @pink;
+  }
+  .clicky {
+    .clicky-small;
+    margin-right: 0;
+  }
+  p {
+    position: relative;
   }
 }
  
