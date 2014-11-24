@@ -971,7 +971,7 @@ header:first-of-type {
   padding-top: 100px;
 }
 #masthead {
-  height: 95vh;
+  height: 100vh;
   min-height: 750px;
   max-height: 900px;
   padding-bottom: 500px;
@@ -1195,8 +1195,17 @@ x-card:hover {
   background: #7EE107;
 }
 .contact#form x-c {
+  margin-top: -1em;
   padding: 0px 2em 50px 2em;
   background: white;
+}
+.contact x-map {
+  display: block;
+  margin: 2em -2em -50px -2em;
+}
+.contact x-map img {
+  display: block;
+  width: 100%;
 }
 .hackerchat#masthead {
   background-color: #1F1F1F;

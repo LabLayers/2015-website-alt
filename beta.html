@@ -138,7 +138,7 @@
   
 <section id="jobs">
   <x-c>
-    <h1 class="bam">Where I'm Making Moves</h1>
+    <h1>Where I'm Making Moves</h1>
     <x-row>
       <x-col size="4">
         <img src="images/logos/mlh.png"/>
@@ -188,21 +188,36 @@
 
 <header class="efnw" id="masthead">
   <x-c>
-    <h1><a href="http://everfreenw.com" class="underline">Everfree Northwest</a></h1>
-    <p class="lead">A digital experience for Seattle's largest My Little Pony convention.</p>
+    <h1>Everfree Northwest</h1>
+    <p class="lead">A website for Seattle's largest My Little Pony convention.</p>
     <br>
       <a href="#" class="clicky">Wut?</a>
     <x-showcase>
       <div class="macbook">
-        <img src="/images/projects/everfreenw-web.png" alt="">
+        <a href="http://everfreenw.com/" taret="_blank"><img src="/images/projects/everfreenw-web.png" alt=""></a>
       </div>
     </x-showcase>
   </x-c>
 </header>
 
-<section>
+<section class="efnw" id="pitch">
   <x-c>
-    <h1>Somewhere</h1>
+    <x-row>
+      <x-col size="4">
+        <h2>Technologies</h2>
+        <p>Under the pressure of time, my partner <a href="http://aviromanoff.me" target="_blank">Avi Romanoff</a> and I built a hackable collaboration platform while exploring unfamiliar technologies.</p>
+      </x-col>
+      <x-col size="4">
+        <h2>Recognition</h2>
+        <p>In just 24 hours, my partner </p>
+      </x-col>
+      <x-col size="4">
+        <h2>Links</h2>
+        <ul>
+          <li>Next-gen hybrid between IRC, IM, Google Docs, and BaseCamp</li>
+        </ul>
+      </x-col>
+    </x-row>
   </x-c>
 </section>
   
@@ -306,17 +321,233 @@
   <x-c>
     <x-row>
       <x-col size="6">
-        <h1>A Poem</h1>
+        <h2>Before Continuing...</h2>
         <p>Hey, I just met you!</p>
-        <p>And this is crazzzy!</p>
+        <p>And this is craaazy!</p>
         <p>So here's my number...</p>
         <p>Call me maybe?</p>
+        <h2>By Email</h2>
+        hello at victorlourgn dot com
+        <br>
+        571 969 1778
       </x-col>
       <x-col size="6">
-        <h1>Operations HQ</h1>
+        <h2>Operations HQ</h2>
         <p>4040 Locust Street</p>
+        <h2>Looking for swag?</h2>
       </x-col>
     </x-row>
+    <!--<x-mapbox-gl address="4040 Locust Street, Philadelphia, PA" design="winter"></x-mapbox-gl>-->
+    <x-map>
+      <div id="map" style="position:relative;width:100%;height:300px;"></div>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.css' rel='stylesheet' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.js'></script>
+      <script>
+      // Sign up to get an access token
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6InlGTGg2VWcifQ.JtZv4b1btXB1FqNK_yMUCQ';
+      // Create a map in the div #map
+      var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: '/design/maps/ordinary.json', //stylesheet location
+        center: [39.9525,-75.1707], // starting position
+        zoom: 13, // starting zoom
+        hash: true, // update page url with location hash
+        bearing: 9.3 // people will love me for this detail!
+      });
+        
+      var geoJSON = {
+      "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+      "features": [
+        {
+          "type": "Feature", // HQ
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.20464, 39.95306]
+          },
+          "properties": {
+            "title": "Operations HQ",
+            "marker-symbol": "warehouse"
+          }
+        }, {
+          "type": "Feature", // Chill
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.14130, 39.94423]
+          },
+          "properties": {
+            "title": "SSHP",
+            "marker-symbol": "harbor"
+          }
+        }, {
+          "type": "Feature", // Work
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.18788, 39.95512]
+          },
+          "properties": {
+            "title": "LeBow Incubator",
+            "marker-symbol": "chemist"
+          }
+        }, {
+          "type": "Feature", // Work
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.16263, 39.94935]
+          },
+          "properties": {
+            "title": "Zivtech",
+            "marker-symbol": "suitcase"
+          }
+        }, {
+          "type": "Feature", // Wee
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.2963, 47.4450]
+          },
+          "properties": {
+            "title": "Friend Lives Here",
+            "marker-symbol": "bakery"
+          }
+        }, {
+          "type": "Feature", // ILITE
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-77.62990, 38.84524]
+          },
+          "properties": {
+            "title": "I Sold My Soul Here",
+            "marker-symbol": "heart"
+          }
+        }, {
+          "type": "Feature", // Elks
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.83390, 39.61574]
+          },
+          "properties": {
+            "title": "Circle of Life",
+            "marker-symbol": "embassy"
+          }
+        }, {
+          "type": "Feature", // MARC
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.75263, 39.68519]
+          },
+          "properties": {
+            "title": "Why hasn't MARC/SEPTA expanded service yet?",
+            "marker-symbol": "cross"
+          }
+        }, {
+          "type": "Feature", // Store
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-73.97301, 40.76384]
+          },
+          "properties": {
+            "title": "A Store to Visit",
+            "marker-symbol": "shop"
+          }
+        }, {
+          "type": "Feature", // Vibes
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-73.99855, 40.72947]
+          },
+          "properties": {
+            "title": "Chiptunes and Co.",
+            "marker-symbol": "music"
+          }
+        }, {
+          "type": "Feature", // Food
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-76.63367, 39.25784]
+          },
+          "properties": {
+            "title": "Great Cookies",
+            "marker-symbol": "bakery"
+          }
+        }, {
+          "type": "Feature", // Pokey
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-76.61835, 39.28457]
+          },
+          "properties": {
+            "title": "Fun! Fun! Fun!",
+            "marker-symbol": "playground"
+          }
+        }, {
+          "type": "Feature", // Yum
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-77.04331, 38.90967]
+          },
+          "properties": {
+            "title": "Circle of Startups",
+            "marker-symbol": "scooter"
+          }
+        }, {
+          "type": "Feature", // Yum
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-77.22125, 38.91792]
+          },
+          "properties": {
+            "title": "Best Mall",
+            "marker-symbol": "land-use"
+          }
+        }, {
+          "type": "Feature", // ?
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-77.73549, 38.96898]
+          },
+          "properties": {
+            "title": "Worlds Collide Here",
+            "marker-symbol": "museum"
+          }
+        }, {
+          "type": "Feature", // Plaza
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-77.43136, 38.89876]
+          },
+          "properties": {
+            "title": "International Love",
+            "marker-symbol": "farm"
+          }
+        }, {
+          "type": "Feature", // City that is not Atlantic
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-74.57098, 39.27468]
+          },
+          "properties": {
+            "title": "Plunging Spot",
+            "marker-symbol": "swimming"
+          }
+        }, {
+          "type": "Feature", // City that is not Atlantic
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-75.14343, 39.94951]
+          },
+          "properties": {
+            "title": "Ice Cream",
+            "marker-symbol": "fast-food"
+          }
+        }
+      ]};
+      var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
+      map.addSource('markers', markers);
+
+      // Add zoom and rotation controls to the map.
+      map.addControl(new mapboxgl.Navigation());
+
+      </script>
+    </x-map>
   </x-c>
 </section>
     
