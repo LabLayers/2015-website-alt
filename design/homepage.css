@@ -337,7 +337,7 @@ table {
   box-sizing: border-box;
 }
 ::selection {
-  background: #ddd0b7;
+  background: #5a9570;
   color: #ffffff;
 }
 ::-moz-selection {
@@ -370,7 +370,6 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  vertical-align: middle;
 }
 a:hover {
   text-decoration: underline;
@@ -430,6 +429,14 @@ h4 {
 }
 p {
   line-height: 1.5em;
+}
+p a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+p a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
 }
 .lead {
   font-size: 1.5em;
@@ -783,6 +790,7 @@ x-col[size="12"] {
   -webkit-user-select: none;
   color: #ffffff;
   background: #000000;
+  border: 2px solid #000000;
   margin-right: 0.5em;
 }
 .clicky:hover {
@@ -798,6 +806,7 @@ x-col[size="12"] {
 .clicky:focus,
 .clicky.active {
   background: #ffffff;
+  border: 2px solid #ffffff;
   color: #000000;
 }
 .clicky:hover {
@@ -805,7 +814,7 @@ x-col[size="12"] {
   transform: translateY(-1px);
 }
 .clicky:active {
-  box-shadow: 0 5px 10px rgba(100, 100, 100, 0.9);
+  box-shadow: 0 5px 10px rgba(50, 50, 50, 0.9);
   transform: translateY(-5px);
 }
 .clicky-small {
@@ -857,6 +866,9 @@ nav {
   left: 0;
   width: 100%;
   z-index: 9001;
+}
+nav a {
+  vertical-align: middle;
 }
 nav .name {
   background: #b7023f;
@@ -1004,6 +1016,8 @@ x-showcase .macbook {
   background: rgba(150, 150, 150, 0.65);
   z-index: 1200;
   position: relative;
+  transition: all 180ms linear;
+  translateZ: 0px;
 }
 x-showcase .macbook img {
   width: 700px;
@@ -1019,8 +1033,13 @@ x-showcase .macbook.left {
 x-showcase .macbook.right {
   position: absolute;
   right: 0;
-  z-index: 1000;
+  z-index: 1100;
   transform: scale(0.8);
+}
+x-showcase .macbook:hover {
+  z-index: 1500;
+  margin-top: -10px;
+  box-shadow: 0 0 20px black;
 }
 #stories {
   background-image: url(/images/hero_test.png);
@@ -1202,7 +1221,7 @@ x-card:hover {
   color: white;
 }
 footer#bottom {
-  background: #425059;
+  background: #FF5254;
   color: white;
 }
 footer#bottom .clicky {
@@ -1242,8 +1261,8 @@ footer#classic .icon-network {
   opacity: 0.15;
   position: absolute;
   font-size: 204px;
-  top: -20px;
-  left: 200px;
+  top: -15px;
+  left: 175px;
   pointer-events: none;
 }
 footer#classic .icon-heart {
