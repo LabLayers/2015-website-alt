@@ -321,17 +321,20 @@
   <x-c>
     <x-row>
       <x-col size="6">
-        <h2>Before Continuing...</h2>
-        <p>Hey, I just met you!</p>
-        <p>And this is craaazy!</p>
-        <p>So here's my number...</p>
-        <p>Call me maybe?</p>
-        <h2>By Email</h2>
-        hello at victorlourgn dot com
-        <br>
-        571 969 1778
+        <h2>Just Fill Out This Form...</h2>
+        <p>I will respond to you within 48 hours.</p>
       </x-col>
       <x-col size="6">
+        <x-row>
+          <x-col size="6">
+            <h2>By Email</h2>
+            <p>hello at victorlourng dot com</p>
+          </x-col>
+          <x-col size="6">
+            <h2>By Phone</h2>
+            <p>571 969 1778</p>
+          </x-col>
+        </x-row>
         <h2>Operations HQ</h2>
         <p>4040 Locust Street</p>
         <h2>Looking for swag?</h2>
@@ -339,7 +342,7 @@
     </x-row>
     <!--<x-mapbox-gl address="4040 Locust Street, Philadelphia, PA" design="winter"></x-mapbox-gl>-->
     <x-map>
-      <div id="map" style="position:relative;width:100%;height:300px;"></div>
+      <div id="map" style=""></div>
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.css' rel='stylesheet' />
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.js'></script>
       <script>
@@ -385,7 +388,7 @@
             "coordinates": [-75.18788, 39.95512]
           },
           "properties": {
-            "title": "LeBow Incubator",
+            "title": "Booksmart",
             "marker-symbol": "chemist"
           }
         }, {
@@ -538,11 +541,40 @@
             "title": "Ice Cream",
             "marker-symbol": "fast-food"
           }
+        }, {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [-122.48369693756104, 37.83381888486939],
+              [-122.48348236083984, 37.83317489144141],
+              [-122.48339653015138, 37.83270036637107],
+              [-122.48356819152832, 37.832056363179625],
+              [-122.48404026031496, 37.83114119107971],
+              [-122.48404026031496, 37.83049717427869],
+              [-122.48348236083984, 37.829920943955045],
+              [-122.48356819152832, 37.82954808664175],
+              [-122.48507022857666, 37.82944639795659],
+              [-122.48610019683838, 37.82880236636284],
+              [-122.48695850372314, 37.82931081282506],
+              [-122.48700141906738, 37.83080223556934],
+              [-122.48751640319824, 37.83168351665737],
+              [-122.48803138732912, 37.832158048267786],
+              [-122.48888969421387, 37.83297152392784],
+              [-122.48987674713133, 37.83263257682617],
+              [-122.49043464660643, 37.832937629287755],
+              [-122.49125003814696, 37.832429207817725],
+              [-122.49163627624512, 37.832564787218985],
+              [-122.49223709106445, 37.83337825839438],
+              [-122.49378204345702, 37.83368330777276]
+            ]
+          }
         }
       ]};
       var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
       map.addSource('markers', markers);
-
+      // map.attributionControl.addAttribution('<a href="https://foursquare.com/">Places data from Foursquare</a>');
       // Add zoom and rotation controls to the map.
       map.addControl(new mapboxgl.Navigation());
 
@@ -584,19 +616,6 @@
       <x-col size="5" class="text-right">
         <a href="#top" class="clicky">Back to Top</a>
         <br>
-          <span class="twitter">
-            <a href="http://twitter.com/lablayers" target="_blank">
-              <i class="icon-twitter"></i>
-            </a>
-          </span><span class="github">
-            <a href="http://github.com/lablayers" target="_blank">
-              <i class="icon-github"></i>
-            </a>
-          </span><span class="dribbble">
-            <a href="http://dribbble.com/lablayers" target="_blank">
-              <i class="icon-dribbble"></i>
-            </a>
-          </span>
       </x-col>
     </x-row>
   </x-c>

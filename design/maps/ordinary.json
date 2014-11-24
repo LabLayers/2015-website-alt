@@ -350,5 +350,17 @@
     "paint": {
       "text-size": 12
     }
+  }, {
+    "id": "route",
+    "type": "line",
+    "source": "route",
+    "layout": {
+      "line-join": "round",
+      "line-cap": "round"
+    },
+    "paint": {
+      "line-color": "@septa-mfl",
+      "line-width": 8
+    }
   }]
 }
