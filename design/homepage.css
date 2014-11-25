@@ -1219,6 +1219,10 @@ x-card:hover {
   background-size: cover;
   background-position: center;
 }
+.contact x-map .mapboxgl-ctrl-attrib:before {
+  content: 'Aesthetically correct map of Philadelphia by Victor - Data ';
+  opacity: 0.8;
+}
 .hackerchat#masthead {
   background-color: #1F1F1F;
   background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/dark_matter.png);
