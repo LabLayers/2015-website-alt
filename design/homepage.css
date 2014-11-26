@@ -359,6 +359,7 @@ body {
   height: 100%!important;
   width: 100%;
   text-align: left;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 .wrap {
