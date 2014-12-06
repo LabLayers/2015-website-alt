@@ -1041,6 +1041,18 @@ x-showcase .macbook:hover {
   margin-top: -10px;
   box-shadow: 0 0 20px black;
 }
+x-showcase .macbook .link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 320;
+}
+#jobs {
+  background: gray;
+  color: white;
+}
 #stories {
   background-image: url(/images/hero_test.png);
   background-size: cover;
@@ -1181,20 +1193,6 @@ x-card:hover {
 .contact#masthead p.lead {
   margin-bottom: 230px;
 }
-.contact#masthead .clicky {
-  background: #000000;
-  border: 2px solid #000000;
-  color: #ffffff;
-}
-.contact#masthead .clicky:hover,
-.contact#masthead .clicky:focus,
-.contact#masthead .clicky.active {
-  background: #ffffff;
-  color: white;
-}
-.contact#masthead .clicky:hover {
-  color: black;
-}
 .contact#form {
   padding: 0;
   background: #7EE107;
@@ -1203,6 +1201,32 @@ x-card:hover {
   margin-top: -1em;
   padding: 0px 2em 50px 2em;
   background: white;
+}
+.contact#form u {
+  color: #40a6a1;
+}
+.contact#form .clicky {
+  display: block;
+  min-width: 200px;
+  margin: 0px auto;
+  font-size: 1.2em;
+  background: #ffc50f;
+  border: 2px solid #ffc50f;
+  color: #000000;
+  max-width: 300px;
+  margin-right: 0;
+  margin-bottom: -1.2em;
+  float: right;
+}
+.contact#form .clicky:hover,
+.contact#form .clicky:focus,
+.contact#form .clicky.active {
+  background: #000000;
+  color: white;
+}
+.contact#form .clicky:hover {
+  color: black;
+  background: #ffd142;
 }
 .contact x-map {
   display: block;

@@ -554,7 +554,21 @@ x-showcase {
       margin-top: -10px;
       box-shadow: 0 0 20px black;
     }
+    .link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 320;
+    }
   }
+}
+
+// Jobs
+#jobs {
+  background: gray;
+  color: white;
 }
 
 // Stories
@@ -719,12 +733,6 @@ x-card {
     p.lead {
       margin-bottom: 230px;
     }
-    .clicky {
-      .button-fill(white, black);
-      &:hover {
-        color: black;
-      }
-    }
   }
   &#form {
     padding: 0;
@@ -733,6 +741,23 @@ x-card {
       margin-top: -1em;
       padding: 0px 2em 50px 2em;
       background: white;
+    }
+    u {
+      color: @blue;
+    }
+    .clicky {
+    // .clicky-small;
+      .clicky-large;
+      .button-fill(black, @yellow);
+      //margin: auto;
+      max-width: 300px;
+      &:hover {
+        color: black;
+        background: lighten(@yellow, 10%);
+      }
+      margin-right: 0;
+      margin-bottom: -1.2em;
+      float: right;
     }
   }
   x-map {
