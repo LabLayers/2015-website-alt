@@ -1204,6 +1204,9 @@ x-showcase .macbook .link {
   text-align: center;
   z-index: 320;
 }
+#projects {
+  padding: 2em 0;
+}
 #projects .project .preview {
   -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
@@ -1330,23 +1333,50 @@ x-card:hover {
   vertical-align: middle;
 }
 header#home {
-  background: #FAEEC9;
+  background: black;
+  background-image: url(../images/philly-view.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
   padding-bottom: 0px;
   height: auto;
-  min-height: 620px!important;
+  min-height: 720px!important;
   max-height: 100vh;
   overflow: hidden;
 }
+header#home:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(25, 25, 25, 0.5);
+}
+header#home .video {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+header#home x-c {
+  position: relative;
+  z-index: 10;
+}
 header#home x-showcase {
-  max-height: 400px;
+  max-height: 450px;
   overflow: hidden;
   position: relative;
   display: block;
   padding-top: 30px;
+  z-index: 10;
 }
 header#home .clicky {
-  background: #000000;
-  border: 2px solid #000000;
+  background: #37bc9b;
+  border: 2px solid #37bc9b;
   color: #ffffff;
 }
 header#home .clicky:hover,
@@ -1356,8 +1386,7 @@ header#home .clicky.active {
   color: white;
 }
 header#home .clicky:hover {
-  color: black;
-  background: transparent;
+  color: #37BC9B;
 }
 .efnw#masthead {
   background: -webkit-gradient(linear, left top, left bottom, from(#85e6e8), to(#ffffff));
