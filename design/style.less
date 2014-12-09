@@ -493,7 +493,7 @@ nav#mane {
 nav#tabbar {
   background: rgba(255,255,255,.5);
   color: inherit;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 9001;
@@ -594,7 +594,7 @@ header {
   // height: 95vh;
   height: 100vh;
   min-height: 750px;
-  max-height: 900px;
+  max-height: 600px;
   padding-bottom: 500px;
   display: flex;
   background-color: @violet;
@@ -605,7 +605,7 @@ header {
 }
 
 x-showcase {
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -614,14 +614,43 @@ x-showcase {
   max-height: 520px;
   .macbook {
     display: inline-block;
-    padding: 40px;
+    padding: 20px;
     border-radius: 16px;
     border: 3px solid white;
-    background: rgba(150,150,150,.65);
+    background: white;
     z-index: 1200;
     position: relative;
     .transition;
+    &.browser {
+      background: white;
+      padding: 0;
+      border-radius: 4px;
+      border: 2px solid black;
+      padding-top: 40px;
+      .link {
+        .icon-right {
+          float: right;
+          line-height: 40px;
+          font-size: 1.5em;
+        }
+        h3 {
+          color: black;
+          line-height: 36px;
+          position: relative;
+          &:before {
+          }
+        }
+      }
+      img {
+        border-top: 2px solid black;
+        border-radius: 0;
+      }
+      &:before {
+
+      }
+    }
     img {
+      display: block;
       width: 700px;
       max-width: 100%;
       border-radius: 2px;
@@ -807,6 +836,28 @@ x-card {
 
 // Home
 header#home {
+  // background-image: radial-gradient(#495a9e, #293258);
+  // color: white;
+  background: #FAEEC9;
+  padding-bottom: 0px;
+  height: auto;
+  min-height: 620px!important;
+  max-height: 100vh;
+  overflow: hidden;
+  x-showcase {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding-top: 30px;    
+  }
+  .clicky {
+    .button-fill(white, black);
+    &:hover {
+      color: black;
+      background: transparent;
+    }
+  }
 }
 
 // EFNW
