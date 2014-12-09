@@ -210,7 +210,7 @@
     },
     "paint": {
       "line-color": "@septa-mfl",
-      "line-width": 4
+      "line-width": 2
     }
   }, {
     "id": "routebsl",
@@ -222,7 +222,7 @@
     },
     "paint": {
       "line-color": "@septa-bsl",
-      "line-width": 4
+      "line-width": 2
     }
   },  {
     "id": "routetrolley",
@@ -234,7 +234,7 @@
     },
     "paint": {
       "line-color": "@septa-trolley",
-      "line-width": 4
+      "line-width": 2
     }
   }, {
     "id": "admin_country",
