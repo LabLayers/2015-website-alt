@@ -883,6 +883,12 @@ a {
   transition: all 180ms linear;
   translateZ: 0px;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 section {
   display: block;
   *padding: 100px 0;
@@ -895,7 +901,7 @@ section {
   -ms-flex-align: center;
   align-items: center;
 }
-nav {
+nav#mane {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
@@ -906,10 +912,10 @@ nav {
   width: 100%;
   z-index: 9001;
 }
-nav a {
+nav#mane a {
   vertical-align: middle;
 }
-nav .name {
+nav#mane .name {
   background: #b7023f;
   top: 0;
   left: 0;
@@ -921,37 +927,37 @@ nav .name {
   transition: all 180ms linear;
   translateZ: 0px;
 }
-nav x-man {
+nav#mane x-man {
   font-weight: bold;
 }
-nav x-man:hover .name {
+nav#mane x-man:hover .name {
   text-decoration: none;
   background: #d00248;
   margin-top: 0;
   margin: -0.75em 0 -1em 0;
 }
-nav x-man:active .name {
+nav#mane x-man:active .name {
   background: #6b0125;
 }
-nav menu {
+nav#mane menu {
   display: inline-block;
   margin: 0;
 }
-nav menu.right {
+nav#mane menu.right {
   float: right;
 }
-nav li {
+nav#mane li {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-nav li a {
+nav#mane li a {
   display: inline-block;
   line-height: 50px;
   padding: 0 1em;
   position: relative;
 }
-nav li a:after {
+nav#mane li a:after {
   -webkit-transition: all 90ms linear;
   transition: all 90ms linear;
   translateZ: 0px;
@@ -962,29 +968,29 @@ nav li a:after {
   width: 100%;
   border-top: 0px solid;
 }
-nav li a:hover,
-nav li .active {
+nav#mane li a:hover,
+nav#mane li .active {
   text-decoration: none;
 }
-nav li a:hover:after,
-nav li .active:after {
+nav#mane li a:hover:after,
+nav#mane li .active:after {
   border-top: 4px solid;
 }
-nav .twitter a,
-nav .github a,
-nav .dribbble a {
+nav#mane .twitter a,
+nav#mane .github a,
+nav#mane .dribbble a {
   padding: 0 0.6em;
 }
-nav .twitter {
+nav#mane .twitter {
   color: #55acee;
 }
-nav .github {
+nav#mane .github {
   color: #ffffff;
 }
-nav .dribbble {
+nav#mane .dribbble {
   color: #ea4c89;
 }
-nav:before {
+nav#mane:before {
   content: ' ';
   background: #000000;
   -webkit-filter: blur(50px);
@@ -1000,6 +1006,55 @@ nav:before {
   z-index: 0;
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
+}
+nav#tabbar {
+  background: none;
+  color: inherit;
+  padding: 1em 0;
+}
+nav#tabbar li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+nav#tabbar li a {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 1em;
+  position: relative;
+}
+nav#tabbar li a:after {
+  -webkit-transition: all 90ms linear;
+  transition: all 90ms linear;
+  translateZ: 0px;
+  position: absolute;
+  content: ' ';
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 0px solid;
+}
+nav#tabbar li a:hover,
+nav#tabbar li .active {
+  text-decoration: none;
+}
+nav#tabbar li a:hover:after,
+nav#tabbar li .active:after {
+  border-top: 4px solid;
+}
+nav#tabbar .twitter a,
+nav#tabbar .github a,
+nav#tabbar .dribbble a {
+  padding: 0 0.6em;
+}
+nav#tabbar .twitter {
+  color: #55acee;
+}
+nav#tabbar .github {
+  color: inherit;
+}
+nav#tabbar .dribbble {
+  color: #ea4c89;
 }
 header {
   background: #039997;

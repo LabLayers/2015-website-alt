@@ -2,26 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Victor Lourng</title>
-  <link rel="stylesheet" href="design/homepage.css">
+  <title>Victor Lourng is Awesome</title>
+  <link rel="stylesheet" href="design/style.css">
   <link rel="stylesheet" href="icons/style.css">
 </head>
 <body>
 
-<nav>
+<nav id="tabbar">
   <!-- I know, these are web components! -->
-  <x-c width="expanded" position="relative">
-    <x-man><a class="name"><i class="icon-emo-grin"></i></a><menu>
+  <x-c width="expanded">
+    <x-man><menu class="left">
       <li>
         <a href="#about">
           Victor Lourng
         </a>
       </li>
-    </menu></x-man><menu class="project">
-      <li>
-        <i class="mdi-navigation-chevron-right"></i>
-      </li>
-    </menu><menu class="right">
       <li>
         <a href="#top">
           Home
@@ -38,7 +33,9 @@
         <a href="#contact">
           Contact
         </a>
-      </li><li class="twitter">
+      </li>
+    </menu></x-man><menu class="right">
+      <li class="twitter">
         <a href="http://twitter.com/lablayers" target="_blank">
           <i class="icon-twitter"></i>
         </a>
@@ -92,229 +89,6 @@
     
   </x-c>
 </header>
-  
-<header id="me">
-  <x-c>
-    <x-row>
-      <x-col size="4">
-        <img src="vectors/characters/victor-reformed.svg"/>
-      </x-col>
-      <x-col size="8">
-        <h1>This is Victor.</h1>
-        <p class="lead">I create amazing things for the world.</p>
-      </x-col>
-    </x-row>
-  </x-c>
-</header>
-
-<section id="portfolio">
-  <x-c>
-    <h1 class="bam">The Portfolio</h1>
-    <x-row>
-      <x-col size="9">
-        <p>Here are some cool things I've built and worked on in the past year:</p>
-        <a href="http://2014.victorlourng.com" class="clicky"><strong>My 2014 Portfolio</strong></a>
-        <a href="http://hackdc.org" class="clicky">HackDC</a>
-        <a href="http://closings.victorlourng.com" class="clicky">School Closings API</a>
-        <a href="https://chrome.google.com/webstore/detail/harlem-shake-the-web/ldejkceiibdbkgjfiagpjhjdadgkelib?hl=en" class="clicky">Harlem Shake The Web!</a>
-        <a href="http://hshackers.org" class="clicky">HS Hackers</a>
-        <a href="http://nyc.hshackers.org" class="clicky">HS Hackers Jekyll</a>
-        <a href="http://drones4u.tumblr.com" class="clicky">Drones4u</a>
-        <a href="http://gestice.org" class="clicky">Gestice</a>
-        <a href="http://hackerchat.im" class="clicky shiny">hackerchat.im</a>
-        <a href="http://pony.fm" class="clicky shiny">Pony.fm</a>
-        <a href="http://changefont.neocities.org" class="clicky">ChangeFont</a>
-        <a href="http://npmjs.org/package/hubot-guru" class="clicky">hubot-guru</a>
-        <a href="http://npmjs.org/package/passport-deviantart" class="clicky">passport-deviantart</a>
-        <a href="http://ttdevelopers.github.io" class="clicky">ttDevelopers</a>
-      </x-col>
-      <x-col size="3">
-        <p>
-          Follow me elsewhere!
-        </p>
-        <a href="https://twitter.com/lablayers" class="clicky twitty">@LabLayers</a>
-        <a href="https://github.com/lablayers" class="clicky gitty">gh/LabLayers</a>
-        <a href="https://dribbble.com/lablayers" class="clicky dribbbly">bbb/LabLayers</a>
-      </x-col>
-    </x-row>
-  </x-c>
-</section>
-  
-<section id="jobs">
-  <x-c>
-    <h1>Where I'm Making Moves</h1>
-    <x-row>
-      <x-col size="3">
-        <img src="images/logos/mlh.png"/>
-      </x-col>
-      <x-col size="9">
-        <h2>Major League Hacking</h2>
-        <p><strong>Director of High Schoolers</strong> in an initative to organize computer science events across the Northeast Corridor.</p>
-      </x-col>
-    </x-row>
-    <x-row>
-      <x-col size="3">
-        <img src="images/logos/zivtech.png"/>
-      </x-col>
-      <x-col size="9">
-        <h2>Zivtech</h2>
-        <p><strong>"High school genius in residence"</strong> - yes, that is my official job title. I help mentor Philly Dev Camp.</p>
-      </x-col>
-    </x-row>
-    <x-row>
-      <x-col size="3">
-        <img src="images/logos/booksmart.png"/>
-      </x-col>
-      <x-col size="9">
-        <h2>Booksmart</h2>
-        <p>Working on web-based concert booking software used by artists worldwide.</p>
-      </x-col>
-    </x-row>
-    <!--
-      <x-col size="4">
-        <img src="images/logos/zivtech.png"/>
-        <h2>Zivtech</h2>
-        <p><strong>"High school genius in residence"</strong> - yes, that is my official job title. I help mentor Philly Dev Camp.</p>
-      </x-col>
-      <x-col size="4">
-        <img src="images/logos/booksmart.png"/>
-        <h2>Booksmart</h2>
-        <p>Working on web-based concert booking software used by artists worldwide.</p>
-      </x-col>
-    </x-row> -->
-  </x-c>
-</section>
-
-
-<header id="about">
-  <x-c>
-    <h1>My name is Victor Lourng.</h1>
-    <p>Presenting some of my latest projects:</p>
-    <br>
-  </x-c>
-</header>
-
-<section id="about">
-  <x-c>
-    <h1 class="bam">The Victor</h1>
-    <x-row>
-      <x-col size="9">
-      <p>
-        A little about me I'm a well-seasoned and award-winning high school student — a enthusiast passionate about making things awesome. I’ve made it to international robotics competitions, regional science fairs, epic college hackathons, and huge comic conventions. I’ve built and managed startups from ideas, websites from scratch, and art from pure nothingness. I’m on a quest for world domination, one small thing at a time.
-      </p>
-      <p>
-        I'm that laser-eyed web unicorn secretly drafting haikus for Zivtech, Booksmart.
-      </p>
-      </x-col>
-      <x-col size="3">
-      </x-col>
-    </x-row>
-  </x-c>
-</section>
-
-<header class="efnw" id="masthead">
-  <x-c>
-    <h1>Everfree Northwest</h1>
-    <p class="lead">A website for Seattle's largest My Little Pony convention.</p>
-    <br>
-      <a href="#" class="clicky">Wut?</a>
-    <x-showcase>
-      <div class="macbook">
-        <a href="http://everfreenw.com/" taret="_blank"><img src="/images/projects/everfreenw-web.png" alt=""></a>
-      </div>
-    </x-showcase>
-  </x-c>
-</header>
-
-<section class="efnw" id="pitch">
-  <x-c>
-    <x-row>
-      <x-col size="4">
-        <h2>Technologies</h2>
-        <p>WordPress CMS is best CMS</p>
-      </x-col>
-      <x-col size="4">
-        <h2>Technologies</h2>
-        <p>WordPress CMS is best CMS</p>
-      </x-col>
-      <x-col size="4">
-        <h2>Links</h2>
-        <ul>
-          <li>Barf.net</li>
-        </ul>
-      </x-col>
-    </x-row>
-  </x-c>
-</section>
-  
-<header class="hackerchat" id="masthead">
-  <x-c>
-    <h1><i class="icon-hackerchat"></i> HackerChat</h1>
-    <p class="lead">Hackable collaboration for developers.</p>
-    <br>
-      <a href="#" class="clicky">Blow my mind!</a>
-    <x-showcase>
-      <div class="macbook">
-        <img src="/images/projects/hackerchat-windows.png" alt="">
-      </div>
-    </x-showcase>
-  </x-c>
-</header>
-
-<section class="hackerchat prize" id="prize">
-  <x-c width="expanded">
-    <p><i class="icon-bolt icon-large"></i> <strong>HackerChat</strong> was the grand prize winner of <strong>PilotPhilly Fall 2013.</strong> <a class="clicky">Read the (lengthy) blog post &nbsp; <i class="icon-point-right"></i></a></p>
-  </x-c>
-</section>
-  
-<section class="hackerchat pitch" id="pitch">
-  <x-c>
-    <x-row>
-      <x-col size="4">
-        <h2>TL;DR</h2>
-        <p>Under the pressure of time, my partner <a href="http://aviromanoff.me" target="_blank">Avi Romanoff</a> and I built a hackable collaboration platform while exploring unfamiliar technologies.</p>
-      </x-col>
-      <x-col size="4">
-        <h2>Hack</h2>
-        <p>In just 24 hours, my partner </p>
-      </x-col>
-      <x-col size="4">
-        <h2>The Pitch</h2>
-        <ul>
-          <li>Next-gen hybrid between IRC, IM, Google Docs, and BaseCamp</li>
-        </ul>
-      </x-col>
-    </x-row>
-  </x-c>
-</section>
-  
-<section class="hackerchat pitch" id="pitch">
-  <x-c>
-    <x-row>
-      <x-col size="4">
-        <h2>Technologies</h2>
-        <ul>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Websockets</li>
-        </ul>
-        <a href="#" class="clicky" target="_blank"><i class="icon-public"></i> Readme.md</a>
-      </x-col>
-      <x-col size="4">
-        <h2>Recognition</h2>
-        <p>1st place winner of the PilotPhilly Fall 2013 hackathon (which happened to be my first)</p>
-        <p>Admission to PennApps</p>
-      </x-col>
-      <x-col size="4">
-        <h2>Links</h2>
-        <ul>
-          <li>hackerchat.im</li>
-          <li>pilotphilly.org</li>
-        </ul>
-      </x-col>
-    </x-row>
-  </x-c>
-</section>  
   
 <section class="project-nav">
     <a href="/prev" class="prev">
