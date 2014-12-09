@@ -542,7 +542,7 @@ x-c[width="expanded"] {
 x-row {
   margin-left: -15px;
   margin-right: -15px;
-  display: table;
+  display: block;
   *zoom: 1;
 }
 x-row:before,
