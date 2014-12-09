@@ -1109,7 +1109,7 @@ header h1 {
   font-size: 68px;
 }
 header:first-of-type {
-  padding-top: 220px;
+  padding-top: 150px;
 }
 .masthead {
   height: 100vh;
@@ -1427,10 +1427,6 @@ x-map .mapboxgl-ctrl-attrib:before {
   background: #1F1F1F;
   color: white;
 }
-footer#bottom {
-  background: #FF5254;
-  color: white;
-}
 footer#bottom .clicky {
   display: block;
   min-width: 200px;
@@ -1459,10 +1455,9 @@ footer#bottom .indecisiveness {
 }
 footer#classic {
   position: relative;
-  background: #2E4347;
-  color: #ffffff;
   padding: 1.5em 0;
   overflow: hidden;
+  background: #e6e6e6;
 }
 footer#classic .icon-network {
   opacity: 0.15;
@@ -1472,6 +1467,12 @@ footer#classic .icon-network {
   left: 175px;
   pointer-events: none;
 }
+footer#classic i {
+  font-size: 0.9em;
+  vertical-align: middle;
+  margin-top: -1px;
+  display: inline-block;
+}
 footer#classic .icon-heart {
   color: #ff0086;
 }
@@ -1480,9 +1481,12 @@ footer#classic .clicky {
   vertical-align: baseline;
   margin-left: .5em;
   margin-right: 0;
+  position: relative;
 }
 footer#classic p {
+  display: inline-block;
   position: relative;
+  line-height: 2em;
 }
 .visible-mobile,
 .hidden-desktop {

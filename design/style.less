@@ -585,7 +585,7 @@ header {
     font-size: 68px;
   }
   &:first-of-type {
-    padding-top: 220px;
+    padding-top: 150px;
   }
 }
 
@@ -911,8 +911,6 @@ x-map {
 
 // Footer
 footer#bottom {
-  background: #FF5254;
-  color: white;
   .clicky {
   // .clicky-small;
     .clicky-large;
@@ -934,10 +932,11 @@ footer#bottom {
 
 footer#classic {
   position: relative;
-  background: #2E4347;
-  color: @white;
+  // background: #2E4347;
+  // color: @white;
   padding: 1.5em 0;
   overflow: hidden;
+  background: rgb(230,230,230);
   .icon-network {
     opacity: 0.15;
     position: absolute;
@@ -946,15 +945,24 @@ footer#classic {
     left: 175px;
     pointer-events: none;
   }
+  i {
+    font-size: 0.9em;
+    vertical-align: middle;
+    margin-top: -1px;
+    display: inline-block;
+  }
   .icon-heart {
     color: @pink;
   }
   .clicky {
     .clicky-small;
     margin-right: 0;
+    position: relative;
   }
   p {
+    display: inline-block;
     position: relative;
+    line-height: 2em;
   }
 }
  
