@@ -1061,6 +1061,23 @@ nav#tabbar x-c {
   border-bottom: 2px solid;
   padding: 1em 0;
 }
+nav#tabbar:before {
+  content: ' ';
+  background: #ffffff;
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 0;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
 header {
   text-align: center;
   padding: 150px 0;
