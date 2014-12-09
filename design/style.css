@@ -1183,6 +1183,23 @@ x-showcase .macbook .link {
   text-align: center;
   z-index: 320;
 }
+#projects .project .preview {
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+  background: white;
+  border-radius: 8px;
+  max-height: 235px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+#projects .project .preview img,
+#projects .project .preview .img {
+  display: block;
+  height: 235px;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 #jobs {
   background: gray;
   color: white;
