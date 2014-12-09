@@ -10,11 +10,11 @@
 
 <nav id="tabbar">
   <!-- I know, these are web components! -->
-  <x-c width="expanded">
+  <x-c>
     <x-man><menu class="left">
       <li>
         <a href="#about">
-          Victor Lourng
+          <strong>Victor Lourng</strong>
         </a>
       </li>
       <li>
@@ -52,43 +52,57 @@
   </x-c>
 </nav>
 
-<header class="home" id="masthead">
+<header id="home">
   <x-c>
     <h1>Hello Internet.</h1>
     <!-- <h1>I make dreams come true.</h1> -->
     <p class="lead">Victor is an awesome web developer based in Philadelphia.</p>
     <br>
-    <a href="#" class="clicky">Amaze Me!</a>
+    <a href="#" class="clicky">Amaze Me <i class="icon-down"></i></a>
     <div class="basement">
     </div>
-    <x-showcase>
-      <div class="macbook">
-        <a href="/everfreenw">
-          <img src="/images/projects/everfreenw-web.png" alt="">
-          <div class="link">
-            <h3>Everfree Northwest</h3>
-          </div>
-        </a>
-      </div>
-      <div class="macbook right">
-        <a href="">
-          <img src="/images/projects/phlsci-web-wider.png" alt="">
-          <div class="link">
-            <h3>PHLSCI</h3>
-          </div>
-        </a>
-      </div>
-      <div class="macbook left">
-        <img src="/images/projects/booksmart-web.png" alt="">
-        <div class="link">
-          <h3>Booksmart</h3>
-        </div>
-
-      </div>
-    </x-showcase>
-    
   </x-c>
 </header>
+
+<div id="projects">
+  <x-c>
+    <x-row>
+      <x-col size="4">
+        <a href="#" class="project">
+          <div class="character">
+          </div>
+          <div class="preview">
+            <img src="images/projects/everfreenw-web.png"/>
+          </div>
+          <div class="caption">
+          </div>
+        </a>
+      </x-col>
+      <x-col size="4">
+        <a href="#" class="project">
+          <div class="character">
+          </div>
+          <div class="preview">
+            <img src="images/projects/everfreenw-web.png"/>
+          </div>
+          <div class="caption">
+          </div>
+        </a>
+      </x-col>
+      <x-col size="4">
+        <a href="#" class="project">
+          <div class="character">
+          </div>
+          <div class="preview">
+            <img src="images/projects/everfreenw-web.png"/>
+          </div>
+          <div class="caption">
+          </div>
+        </a>
+      </x-col>
+    </x-row>
+  </x-c>
+</div>
   
 <section class="project-nav">
     <a href="/prev" class="prev">
@@ -109,7 +123,7 @@
 </section>
 
 
-<header class="contact" id="masthead">
+<header class="masthead" id="contact">
   <x-c>
     <h1>Say hai!</h1>
     <p class="lead">Todo: replace with real unicorn!</p>
