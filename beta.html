@@ -367,39 +367,79 @@
             "title": "Ice Cream",
             "marker-symbol": "fast-food"
           }
-        }, {
-          "type": "Feature",
-          "properties": {},
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [-122.48369693756104, 37.83381888486939],
-              [-122.48348236083984, 37.83317489144141],
-              [-122.48339653015138, 37.83270036637107],
-              [-122.48356819152832, 37.832056363179625],
-              [-122.48404026031496, 37.83114119107971],
-              [-122.48404026031496, 37.83049717427869],
-              [-122.48348236083984, 37.829920943955045],
-              [-122.48356819152832, 37.82954808664175],
-              [-122.48507022857666, 37.82944639795659],
-              [-122.48610019683838, 37.82880236636284],
-              [-122.48695850372314, 37.82931081282506],
-              [-122.48700141906738, 37.83080223556934],
-              [-122.48751640319824, 37.83168351665737],
-              [-122.48803138732912, 37.832158048267786],
-              [-122.48888969421387, 37.83297152392784],
-              [-122.48987674713133, 37.83263257682617],
-              [-122.49043464660643, 37.832937629287755],
-              [-122.49125003814696, 37.832429207817725],
-              [-122.49163627624512, 37.832564787218985],
-              [-122.49223709106445, 37.83337825839438],
-              [-122.49378204345702, 37.83368330777276]
-            ]
-          }
         }
       ]};
       var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
       map.addSource('markers', markers);
+
+      var geoJSONMFL = {
+        "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [-75.25935173034668, 39.96185925653245],
+                [-75.2468204498291, 39.96271448002115],
+                [-75.14382362365723, 39.949819206129945],
+                [-75.13240814208984, 39.986590631428506],
+                [-75.08962154388428, 40.009603815001704],
+                [-75.07730484008789, 40.02373663935909]
+              ]
+            }
+          }
+        ]
+      };
+      var routemfl = new mapboxgl.GeoJSONSource({ data: geoJSONMFL });
+      map.addSource('routemfl', routemfl);
+
+      var geoJSONBSL = {
+        "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [-75.14433860778809, 40.04121785026443],
+                [-75.17377853393555, 39.90578590324711]
+              ]
+            }
+          }
+        ]
+      };
+      var routebsl = new mapboxgl.GeoJSONSource({ data: geoJSONBSL });
+      map.addSource('routebsl', routebsl);
+
+      var geoJSONTrolley = {
+        "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [-75.24664878845215,39.94356807095909],
+                [-75.2404260635376,39.945969890463914],
+                [-75.23175716400146,39.94787812530285],
+                [-75.22489070892334,39.94774652460901],
+                [-75.20841121673584,39.949819206129945],
+                [-75.19952774047852,39.95021399548981],
+                [-75.18970012664795,39.95406307233881],
+                [-75.1834774017334,39.95488549657055]
+              ]
+            }
+          }
+        ]
+      };
+      var routetrolley = new mapboxgl.GeoJSONSource({ data: geoJSONTrolley });
+      map.addSource('routetrolley', routetrolley);
+
+
       // map.attributionControl.addAttribution('<a href="https://foursquare.com/">Places data from Foursquare</a>');
       // Add zoom and rotation controls to the map.
       map.addControl(new mapboxgl.Navigation());
