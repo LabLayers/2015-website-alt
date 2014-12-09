@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<nav id="mane">
+<nav id="tabbar">
   <!-- I know, these are web components! -->
   <x-c>
     <x-man><menu class="left">
@@ -172,7 +172,7 @@
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.css' rel='stylesheet' />
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.js'></script>
       <script>
-      // Sign up to get an access token
+      // TODO: Move all of this map code to a separate file
       mapboxgl.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6InlGTGg2VWcifQ.JtZv4b1btXB1FqNK_yMUCQ';
       // Create a map in the div #map
       var map = new mapboxgl.Map({
