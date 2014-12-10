@@ -834,11 +834,37 @@ x-card {
 // This is Victor
 #me {
   background: @purple;
+  x-row {
+    text-align: left;
+  }
+  .variants {
+    text-align: center;
+    a {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      background: rgba(0,0,0,.5);
+      border-radius: 4px;
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+  .caption-box {
+    background: white;
+    color: rgb(30,30,30);
+    padding: .5em 1em;
+    margin-top: 1em;
+    &:before {
+      // Insert triangle
+    }
+  }
 }
 
 // About
 #about {
-
+  background: @purple;
 }
 
 // Prizes

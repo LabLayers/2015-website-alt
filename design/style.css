@@ -1347,6 +1347,32 @@ x-card:hover {
 #me {
   background: #5a358c;
 }
+#me x-row {
+  text-align: left;
+}
+#me .variants {
+  text-align: center;
+}
+#me .variants a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+#me .variants a:hover {
+  background: white;
+  color: black;
+}
+#me .caption-box {
+  background: white;
+  color: #1e1e1e;
+  padding: .5em 1em;
+  margin-top: 1em;
+}
+#about {
+  background: #5a358c;
+}
 #prize {
   text-align: center;
   padding: 1em 0;
