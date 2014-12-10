@@ -372,6 +372,11 @@ a {
   float: right;
 }
 
+// Reading
+p {
+  margin-bottom: 1em;
+}
+
 // Sections
 section {
   display: block;
@@ -565,8 +570,8 @@ nav#tabbar {
 
 // Header
 header {
-  // background-color: @teal;
-  // color: @white;
+  background-color: @pink;
+  color: @white;
   text-align: center;
   padding: 150px 0;
   h1 {
@@ -576,9 +581,15 @@ header {
     .clicky-large;
     .button-fill(white,black);
     width: 20%;
+    display: inline-block;
+    margin: auto;
     &:hover {
       background: @blue;
       color: @white;
+    }
+    i {
+      float: left;
+      margin-top: 2px;
     }
   }
   h1 {
@@ -612,74 +623,75 @@ x-showcase {
   height: 52vh;
   min-height: 400px;
   max-height: 520px;
-  .macbook {
-    display: inline-block;
-    padding: 20px;
-    border-radius: 16px;
-    border: 3px solid white;
+}
+.macbook, .browser {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 16px;
+  border: 3px solid white;
+  background: white;
+  z-index: 1200;
+  position: relative;
+  .transition;
+  &.browser {
     background: white;
-    z-index: 1200;
-    position: relative;
-    .transition;
-    &.browser {
-      background: white;
-      padding: 0;
-      border-radius: 4px;
-      border: 2px solid black;
-      padding-top: 40px;
-      .link {
-        .icon-right {
-          float: right;
-          line-height: 40px;
-          font-size: 1.5em;
-        }
-        h3 {
-          color: black;
-          line-height: 36px;
-          position: relative;
-          &:before {
-          }
-        }
+    padding: 0;
+    border-radius: 4px;
+    border: 2px solid black;
+    padding-top: 40px;
+    .link {
+      .icon-right {
+        float: right;
+        line-height: 40px;
+        font-size: 1.5em;
+        color: black;
       }
-      img {
-        border-top: 2px solid black;
-        border-radius: 0;
-      }
-      &:before {
-
+      h3 {
+        color: black;
+        line-height: 36px;
+        position: relative;
+        &:before {
+        }
       }
     }
     img {
-      display: block;
-      width: 700px;
-      max-width: 100%;
-      border-radius: 2px;
+      border-top: 2px solid black;
+      border-radius: 0;
     }
-    &.left {
-      position: absolute;
-      left: 0;
-      z-index: 1100;
-      transform: scale(0.8);
+    &:before {
+
     }
-    &.right {
-      position: absolute;
-      right: 0;
-      z-index: 1100;
-      transform: scale(0.8);
-    }
-    &:hover {
-      z-index: 1500;
-      margin-top: -10px;
-      box-shadow: 0 0 20px black;
-    }
-    .link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      z-index: 320;
-    }
+  }
+  img {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    border-radius: 2px;
+  }
+  &.left {
+    position: absolute;
+    left: 0;
+    z-index: 1100;
+    transform: scale(0.8);
+  }
+  &.right {
+    position: absolute;
+    right: 0;
+    z-index: 1100;
+    transform: scale(0.8);
+  }
+  &:hover {
+    z-index: 1500;
+    margin-top: -10px;
+    box-shadow: 0 0 20px black;
+  }
+  .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 320;
   }
 }
 
@@ -687,9 +699,10 @@ x-showcase {
 #projects {
   padding: 2em 0;
   .project {
+    display: block;
     .character {}
     .preview {
-      box-shadow: 0 6px 10px rgba(0,0,0,.23),0 10px 30px rgba(0,0,0,.19);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
       // padding: 4px;
       background: white;
       // border: 1px solid rgb(50,50,50);
@@ -697,6 +710,7 @@ x-showcase {
       max-height: 235px;
       overflow: hidden;
       margin-bottom: 1em;
+      .transition;
       img, .img {
         display: block;
         height: 235px;
@@ -705,14 +719,19 @@ x-showcase {
         // border-radius: 8px;
       }
     }
+    &:hover {
+      .preview {
+        box-shadow: 0 10px 18px rgba(0,0,0,.22),0 14px 45px rgba(0,0,0,.25);
+      }
+    }
   }
 
 }
 
 // Jobs
 #jobs {
-  background: gray;
-  color: white;
+  // background: gray;
+  // color: white;
 }
 
 // Stories
@@ -734,6 +753,8 @@ x-showcase {
     display: inline-block;
     width: 50%;
     padding: 50px 0;
+    background: gray;
+    color: white;
   }
   .prev, .next {
     // display: flex;
@@ -840,7 +861,7 @@ header#home {
   // background-image: radial-gradient(#495a9e, #293258);
   // color: white;
   background: black;
-  background-image: url(../images/philly-view.jpg);
+  background-image: url(../images/placeholder-view-alt.jpg);
   background-size: cover;
   color: white;
   padding-bottom: 0px;
@@ -955,7 +976,7 @@ x-map {
     display: block;
     width: 100%;
   }
-  margin: 2em -2em -50px -2em;
+  margin: 2em -2em;
   #map {
     position: relative;
     width: 100%;
