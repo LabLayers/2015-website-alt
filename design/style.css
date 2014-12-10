@@ -992,7 +992,7 @@ nav#mane .dribbble {
 }
 nav#mane:before {
   content: ' ';
-  background: #000000;
+  background: rgba(0, 0, 0, 0.5);
   -webkit-filter: blur(50px);
   -moz-filter: blur(50px);
   -o-filter: blur(50px);
