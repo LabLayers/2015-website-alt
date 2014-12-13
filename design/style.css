@@ -1260,6 +1260,13 @@ x-showcase {
   background: #b7023f;
   color: white;
 }
+.project .clicky {
+  padding: 0.2em 0.5em;
+  vertical-align: baseline;
+  margin-left: .5em;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
 .job#zivtech {
   background: #424242;
   color: white;
