@@ -1371,7 +1371,7 @@ x-card:hover {
 }
 header#home {
   background: black;
-  background-image: url(../images/placeholder-view-alt.jpg);
+  background-image: url(/images/placeholder-view-alt.jpg);
   background-size: cover;
   color: white;
   padding-bottom: 0px;
