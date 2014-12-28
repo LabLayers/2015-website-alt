@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Victor Lourng</title>
-  <meta http-equiv="refresh" content="0; url=http://victorlourng.com" />
+  <link rel="stylesheet" href="design/build/production.css">
+  <link rel="stylesheet" href="icons/style.css">
 </head>
-<body>
+<body ng-app="victorIsAwesome">
+
+	<div ng-include='"templates/header.html"'></div>
+	<div ng-view></div>
+	<div ng-include='"templates/footer.html"'></div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+	<script src="/scripts/build/production.js"></script>
+
 </body>
 </html>

@@ -1,3 +1,36 @@
+// Angular Application
+var app = angular.module('victorIsAwesome', [
+  'ngRoute'
+]);
+
+// Angular Routes
+app.config(['$routeProvider', function ($routeProvider) {
+  $routeProvider
+    // Home
+    .when("/", {templateUrl: "pages/home.html", controller: "pageController"})
+    // Pages
+    .when("/about", {templateUrl: "pages/about.html", controller: "pageController"})
+    .when("/contact", {templateUrl: "pages/contact.html", controller: "pageController"})
+    // Blog
+    .when("/projects", {templateUrl: "pages/projects.html", controller: "projectController"})
+    .when("/project/item", {templateUrl: "pages/project.html", controller: "projectController"})
+    // else 404
+    .otherwise("/404", {templateUrl: "pages/404.html", controller: "pageController"});
+}]);
+
+// Angular Projects Controller
+app.controller('projectController', function () {
+  console.log("Project activated.");
+  // Blog
+});
+
+// Angular Pages Controller
+app.controller('pageController', function () {
+  console.log("Page activated.");
+  // Page-specific scripts
+});
+
+
 // = require bower
 // = require jquery
 // = require_tree .
