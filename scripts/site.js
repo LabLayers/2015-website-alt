@@ -11,6 +11,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Pages
     .when("/about", {templateUrl: "pages/about.html", controller: "pageController"})
     .when("/contact", {templateUrl: "pages/contact.html", controller: "pageController"})
+    // Event Pages
+    .when("/holiday", {templateUrl: "pages/holiday.html", controller: "pageController"})
     // Blog
     .when("/projects", {templateUrl: "pages/projects.html", controller: "projectController"})
     .when("/project/item", {templateUrl: "pages/project.html", controller: "projectController"})

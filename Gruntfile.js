@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             // 2. Configuration for concatinating files goes here.
             dist: {
                 src: [
-                    'scripts/libs/*.js', // All JS in the libs folder
+                    'scripts/lib/*.js', // All JS in the libs folder
                     'scripts/site.js'  // This specific file
                 ],
                 dest: 'scripts/build/production.js',
@@ -39,7 +39,8 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'design/build/production.css': 'design/site.less'
+                    'design/build/production.css': 'design/site.less',
+                    'design/build/holiday.css': 'design/holiday.less'
                 }
             } 
         },
@@ -69,7 +70,7 @@ module.exports = function(grunt) {
                 livereload: true,
             },
             scripts: {
-                files: ['index.html', 'styles/*', 'scripts/*'],
+                files: ['index.html', 'design/*', 'scripts/*'],
                 tasks: ['concat', 'less', 'autoprefixer'],
                 options: {
                     spawn: false,
