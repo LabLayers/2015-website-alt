@@ -21,6 +21,17 @@
   width: 100%;
   z-index: 0;
 }
+#holiday .metropolis {
+  position: absolute;
+  margin-top: 20px;
+  background-image: url(/vectors/scenes/holiday-metropolis.svg);
+  left: 0;
+  height: 365px;
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
 #holiday .ground {
   position: absolute;
   margin-top: 385px;
