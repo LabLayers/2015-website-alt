@@ -1,0 +1,315 @@
+#holiday {
+  background: #012935;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+#holiday h1 {
+  font-family: 'Snow', Arial, sans-serif;
+  font-size: 72px;
+  font-weight: normal;
+  line-height: 2em;
+}
+#holiday .platform {
+  background: #0d544c;
+  position: relative;
+  margin: auto;
+  max-width: 800px;
+  border-radius: 50%;
+  height: 90px;
+  display: block;
+  margin-top: 350px;
+}
+#holiday .tree {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  height: 192px;
+  transform: scale(1.5);
+}
+#holiday .tree .star {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 50%;
+  color: #ffff00;
+  vertical-align: middle;
+  line-height: 24px;
+  font-size: 48px;
+  text-align: center;
+}
+#holiday .tree .star:before {
+  content: "\2605";
+}
+#holiday .tree .star .halo {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffff00;
+  opacity: 0.15;
+  transform: scale(1.25);
+}
+#holiday .tree .bark {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -10px;
+  background: #9e6f51;
+  width: 20px;
+  height: 54px;
+}
+#holiday .tree .triangles span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+#holiday .tree .triangles span:first-of-type {
+  bottom: 54px;
+  left: 50%;
+  margin-left: -60px;
+  border-width: 0 60px 70px 60px;
+  border-color: transparent transparent #28ae4b transparent;
+}
+#holiday .tree .triangles span:nth-child(2) {
+  bottom: 92px;
+  left: 50%;
+  margin-left: -50px;
+  border-width: 0 50px 70px 50px;
+  border-color: transparent transparent #28ae4b transparent;
+}
+#holiday .tree .triangles span:last-of-type {
+  bottom: 130px;
+  left: 50%;
+  margin-left: -40px;
+  border-width: 0 40px 70px 40px;
+  border-color: transparent transparent #28ae4b transparent;
+}
+#holiday .snowman {
+  position: absolute;
+  left: 120px;
+  bottom: 45px;
+  background: white;
+  width: 90px;
+  height: 200px;
+  border-bottom-left-radius: 40px 30px;
+  border-bottom-right-radius: 40px 30px;
+  /* .body {
+			span:first-child {
+				width: 60px;
+				height: 60px;
+			}
+			span:last-child {
+				width: 90px;
+				height: 90px;
+			}
+		} */
+}
+#holiday .snowman .hat {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #8f4293;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  /* &:before {
+				content: ' ';
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				height: 15px;
+				background: @lightgray;
+				width: 100%;
+				border-radius: 50%;
+			} */
+}
+#holiday .snowman .hat:before {
+  content: ' ';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  background: #8f4293;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+#holiday .snowman .hat:after {
+  content: ' ';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 15px;
+  background: white;
+  width: 100%;
+  border-radius: 50%;
+  border-top: 5px solid #f0f0f0;
+}
+#holiday .snowman .eyes {
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  width: 40px;
+  height: 6px;
+  margin-left: -20px;
+}
+#holiday .snowman .eyes span {
+  height: 6px;
+  width: 6px;
+  background: black;
+  border-radius: 6px;
+}
+#holiday .snowman .eyes span:first-child {
+  float: left;
+}
+#holiday .snowman .eyes span:last-child {
+  float: right;
+}
+#holiday .snowman .nose {
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 30px;
+  border-color: transparent transparent transparent #ff8c00;
+}
+#holiday .snowman .scarf {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 25px;
+  border-radius: 12px;
+  background: #8f4293;
+  bottom: 100px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+#holiday .snowman .scarf:after {
+  content: ' ';
+  position: absolute;
+  right: 0px;
+  top: 12px;
+  width: 25px;
+  height: 40px;
+  border-radius: 12px;
+  background: #8f4293;
+  transform: rotate(-20deg);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+#holiday .snowman .buttons {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  margin-left: -7px;
+}
+#holiday .snowman .buttons span {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 8px;
+  background: black;
+  border-radius: 50%;
+  display: block;
+}
+#holiday .snowman.santa {
+  left: auto!important;
+  right: 120px;
+}
+#holiday .snowman.santa .hat {
+  background: #ee3837;
+}
+#holiday .snowman.santa .hat:before {
+  background: white;
+}
+#holiday .snowman.santa .beard span {
+  background: #dddddd;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+#holiday .snowman.santa .beard span:first-of-type {
+  left: -10px;
+  top: 40px;
+}
+#holiday .snowman.santa .beard span:nth-child(2) {
+  right: -10px;
+  top: 40px;
+}
+#holiday .snowman.santa .beard span:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 40px;
+}
+#holiday .snowman.santa .beard span:nth-child(4) {
+  width: 40px;
+  height: 40px;
+  right: 0px;
+  top: 40px;
+}
+#holiday .snowman.santa .beard span:nth-child(5) {
+  left: -5px;
+  top: 50px;
+}
+#holiday .snowman.santa .beard span:nth-child(6) {
+  right: -5px;
+  top: 50px;
+}
+#holiday .snowman.santa .beard span:nth-child(7) {
+  left: 25px;
+  top: 55px;
+}
+#holiday .snowman.santa .beard span:nth-child(8) {
+  right: 25px;
+  top: 55px;
+}
+#holiday .snowman.santa .beard span:last-of-type {
+  left: 50%;
+  width: 60px;
+  height: 40px;
+  margin-left: -30px;
+  top: 30px;
+}
+#holiday .snowman.santa .beard .cherry {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  background: red;
+  border-radius: 50%;
+}
+#holiday .snowman.santa .coat {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #ee3837;
+}
+#holiday .snowman.santa .coat .buttons span {
+  background: white;
+}
+#holiday .snowman.santa .coat .belt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #282828;
+}
