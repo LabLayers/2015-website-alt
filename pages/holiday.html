@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/design/build/holiday.css">
 <section class="header-like" id="holiday">
 	<x-c>
-		<h1 class="greeting">Seasons Greetings!</h1>
+		<h1 class="greeting">{{greeting}}</h1>
 		<canvas id="snow"></canvas>
 		<div class="metropolis"></div>
 		<div class="ground"></div>
@@ -70,11 +70,15 @@
 </section>
 <section id="holiday-message">
 	<x-c>
-		<p class="lead"><span class="message">Holiday songs in the background to set the mood, the lights are blinking, the eggnog is ready and family and friends are on their way. What else could you ask for?!</span> <span class="string">Happy Holidays!</span></p>
+		<p class="lead"><span class="message">{{message}}</span> <span class="string">Happy Holidays!</span></p>
 		<p>
-		<br>
-		- Victor Lourng <i class="icon-face-unlock"></i>
-		<br>
-		<!-- P.S. card messages aren't my thing.--></p>
+			- Victor Lourng <i class="icon-face-unlock"></i>
+			<br>
+			<br>
+			<a href="https://twitter.com/intent/tweet?text={{message}}&tw_p=tweetbutton&tw_p=tweetbutton&hashtags=HappyHolidays&via=lablayers&url=http://victor.moe/holiday&original_referer=http://victor.moe/holiday" target="_blank" class="pull-right tweetit"><i class="icon-twitter"></i> Tweet It!</a>
+			<br>
+			<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=340281129472556" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px; display: inline-block; width: 100px" allowTransparency="true"></iframe>
+			<!-- P.S. card messages aren't my thing.-->
+		</p>
 	</x-c>
 </section>

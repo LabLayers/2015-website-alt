@@ -262,7 +262,7 @@ app.controller('pageController', function () {
 });
 
 // Angular Holiday Controller
-app.controller('holidayController', function () {
+app.controller('holidayController', ['$scope', function($scope) {
 	console.log("Ho, ho, ho!");
 	// Page-specific scripts
 	var greetingArray = [
@@ -270,8 +270,7 @@ app.controller('holidayController', function () {
 		"Happy Holidays!",
 		"Ho Ho Ho!"
 	];
-	var greetingSelection = greetingArray[Math.floor(Math.random() * greetingArray.length)];
-	document.querySelector("h1.greeting").textContent = greetingSelection;
+	$scope.greeting = greetingArray[Math.floor(Math.random() * greetingArray.length)];
 	var messageArray = [
 		"You know what I truly love about the holiday season? I can eat everything I want because you know, it's the holidays!",
 		"Want to know what I got for the holidays this year? A free domain name.",
@@ -292,8 +291,7 @@ app.controller('holidayController', function () {
 		"I don't know about you, but the holiday season is the most wonderful tie of the year. The tree, the lights, all the presents to unwrap. Could there be anything more magical than that?! :)",
 		"Holiday songs in the background to set the mood, the lights are blinking, the eggnog is ready and family and friends are on their way. What else could you ask for?!"
 	];
-	var messageSelection = messageArray[Math.floor(Math.random() * messageArray.length)];
-	document.querySelector("span.message").textContent = messageSelection;
+	$scope.message = messageArray[Math.floor(Math.random() * messageArray.length)];
 	var snow = function () {
 	// SNOW!
 	// -> Winter wrap-up planned for never!
@@ -381,7 +379,7 @@ app.controller('holidayController', function () {
 	};
 	// And fire it after definition
 	snow();
-});
+}]);
 
 // = require bower
 // = require jquery
