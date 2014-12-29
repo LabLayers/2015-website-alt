@@ -17,7 +17,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/projects", {templateUrl: "pages/projects.html", controller: "projectController"})
     .when("/project/item", {templateUrl: "pages/project.html", controller: "projectController"})
     // else 404
-    .otherwise("/404", {templateUrl: "pages/404.html", controller: "pageController"});
+    .otherwise({templateUrl: "pages/404.html"});
 }]);
 
 // Angular Projects Controller

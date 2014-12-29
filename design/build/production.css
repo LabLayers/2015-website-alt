@@ -1073,6 +1073,7 @@ nav#neue span {
   border-radius: 6px;
   padding: 0.25em 0.5em;
   background: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 header {
   background-color: #ff0086;
