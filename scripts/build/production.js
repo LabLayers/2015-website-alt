@@ -265,6 +265,13 @@ app.controller('pageController', function () {
 app.controller('holidayController', function () {
 	console.log("Ho, ho, ho!");
 	// Page-specific scripts
+	var greetingArray = [
+		"Seasons Greetings!",
+		"Happy Holidays!",
+		"Ho Ho Ho!"
+	];
+	var greetingSelection = greetingArray[Math.floor(Math.random() * greetingArray.length)];
+	document.querySelector("h1.greeting").textContent = greetingSelection;
 	var messageArray = [
 		"You know what I truly love about the holiday season? I can eat everything I want because you know, it's the holidays!",
 		"Want to know what I got for the holidays this year? A free domain name.",
