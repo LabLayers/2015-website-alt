@@ -8,7 +8,8 @@
 }
 #holiday h1 {
   font-family: 'Snow', Arial, sans-serif;
-  font-size: 72px;
+  font-size: 84px;
+  margin-top: -50px;
   font-weight: normal;
   line-height: 2em;
 }
@@ -342,4 +343,8 @@
   width: 100%;
   height: 10px;
   background: #282828;
+}
+#holiday-message {
+  background: #0d544c;
+  color: white;
 }

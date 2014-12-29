@@ -601,6 +601,22 @@ nav#neue {
     background: rgba(0,0,0,.5);
     color: white;
   }
+  li {
+    &.github, &.twitter, &.dribbble {
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      border-radius: 50%;
+      vertical-align: middle;
+      .transition;
+      &:hover {
+        background: rgba(150,150,150,.5);
+        transform: scale(1.15);
+      }
+      &.twitter:hover { color: @twitter; }
+      &.dribbble:hover { color: @dribbble; }
+    }
+  }
 }
 
 // Header

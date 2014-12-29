@@ -1075,6 +1075,36 @@ nav#neue span {
   background: rgba(0, 0, 0, 0.5);
   color: white;
 }
+nav#neue li.github,
+nav#neue li.twitter,
+nav#neue li.dribbble {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+  vertical-align: middle;
+  -webkit-transition: all 180ms linear;
+          transition: all 180ms linear;
+  translateZ: 0px;
+}
+nav#neue li.github:hover,
+nav#neue li.twitter:hover,
+nav#neue li.dribbble:hover {
+  background: rgba(150, 150, 150, 0.5);
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+nav#neue li.github.twitter:hover,
+nav#neue li.twitter.twitter:hover,
+nav#neue li.dribbble.twitter:hover {
+  color: #55acee;
+}
+nav#neue li.github.dribbble:hover,
+nav#neue li.twitter.dribbble:hover,
+nav#neue li.dribbble.dribbble:hover {
+  color: #ea4c89;
+}
 header {
   background-color: #ff0086;
   color: #ffffff;
