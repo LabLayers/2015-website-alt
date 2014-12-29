@@ -634,6 +634,18 @@ header {
   }
 }
 
+span.beta {
+  font-size: 0.7em;
+  background: @seabreeze;
+  color: white;
+  padding: 0 0.4em;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 2px;
+  border-radius: 4px;
+  line-height: 1.5em;
+}
+
 // Homepage
 .masthead {
   // height: 95vh;
@@ -1002,9 +1014,11 @@ header#home {
     z-index: 10;  
   }
   .clicky {
-    .button-fill(white, #37BC9B);
+    .button-fill(white, @seabreeze);
+    width: auto;
+    max-height: 400px;
     &:hover {
-      color: #37BC9B;
+      color: @seabreeze;
     }
   }
 }
