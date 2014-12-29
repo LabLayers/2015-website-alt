@@ -347,4 +347,9 @@
 #holiday-message {
   background: #0d544c;
   color: white;
+  text-align: center;
+  padding-top: 0px;
+}
+#holiday-message span {
+  opacity: 0.65;
 }
