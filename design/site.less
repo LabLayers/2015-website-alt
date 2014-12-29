@@ -568,6 +568,40 @@ nav#tabbar {
   }
 }
 
+// New New Nav
+nav#neue {
+  background: none;
+  color: white;
+  padding: 25px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9001;
+  menu {
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    line-height: 50px;
+    padding: 0 0.5em;
+    vertical-align: middle;
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  span {
+    border-radius: 6px;
+    padding: 0.25em 0.5em;
+    background: rgba(0,0,0,.5);
+  }
+}
+
 // Header
 header {
   background-color: @pink;
@@ -598,6 +632,18 @@ header {
   &:first-of-type {
     padding-top: 150px;
   }
+}
+
+span.beta {
+  font-size: 0.7em;
+  background: @seabreeze;
+  color: white;
+  padding: 0 0.4em;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 2px;
+  border-radius: 4px;
+  line-height: 1.5em;
 }
 
 // Homepage
@@ -968,9 +1014,11 @@ header#home {
     z-index: 10;  
   }
   .clicky {
-    .button-fill(white, #37BC9B);
+    .button-fill(white, @seabreeze);
+    width: auto;
+    max-height: 400px;
     &:hover {
-      color: #37BC9B;
+      color: @seabreeze;
     }
   }
 }

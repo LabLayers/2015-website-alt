@@ -1042,6 +1042,38 @@ nav#tabbar:before {
   -webkit-transform: translateZ(0px);
           transform: translateZ(0px);
 }
+nav#neue {
+  background: none;
+  color: white;
+  padding: 25px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9001;
+}
+nav#neue menu {
+  display: inline-block;
+}
+nav#neue li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+nav#neue a {
+  line-height: 50px;
+  padding: 0 0.5em;
+  vertical-align: middle;
+  display: inline-block;
+}
+nav#neue a:hover {
+  text-decoration: none;
+}
+nav#neue span {
+  border-radius: 6px;
+  padding: 0.25em 0.5em;
+  background: rgba(0, 0, 0, 0.5);
+}
 header {
   background-color: #ff0086;
   color: #ffffff;
@@ -1082,6 +1114,17 @@ header h1 {
 }
 header:first-of-type {
   padding-top: 150px;
+}
+span.beta {
+  font-size: 0.7em;
+  background: #77cca4;
+  color: white;
+  padding: 0 0.4em;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 2px;
+  border-radius: 4px;
+  line-height: 1.5em;
 }
 .masthead {
   height: 100vh;
@@ -1411,9 +1454,11 @@ header#home x-showcase {
   z-index: 10;
 }
 header#home .clicky {
-  background: #37bc9b;
-  border: 2px solid #37bc9b;
+  background: #77cca4;
+  border: 2px solid #77cca4;
   color: #ffffff;
+  width: auto;
+  max-height: 400px;
 }
 header#home .clicky:hover,
 header#home .clicky:focus,
@@ -1422,7 +1467,7 @@ header#home .clicky.active {
   color: white;
 }
 header#home .clicky:hover {
-  color: #37BC9B;
+  color: #77cca4;
 }
 .efnw#masthead {
   background: -webkit-linear-gradient(top, #85e6e8, #ffffff);

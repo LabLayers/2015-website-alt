@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Victor Lourng</title>
-  <meta http-equiv="refresh" content="0; url=http://victorlourng.com" />
+	<!-- Hi, my name is....-->
+	<title>Victor Lourng</title>
+	<!-- Encoding-->
+	<meta charset="utf-8">
+	<!-- For all the mobile users, of course :)-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale = 1.0,maximum-scale=2.0,user-scalable=yes">
+	<!-- SEO Tags for GOOGLE BING YAHOOOOOO DUCKS-->
+	<meta name="keywords" content="Victor Lourng, Creative, Student, Enginner, Philadelphia, Pennsylvania, Web Development, CSS, Javascript, HS Hackers">
+	<!-- Go be me.-->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Victor Lourng">
+	<meta property="og:site_name" content="Victor Lourng">
+	<meta property="og:description" content="I am a sound chemist, color flavorist &amp; a pure geek. When I’m not playing with my mouse, I’m inspiring and leading the way for innovation and great ideas.">
+	<meta property="og:url" content="http://victorlourng.com/">
+	<meta property="og:image" content="http://lablayers.github.io/shutter/ava-coolio.png">
+	<meta property="og:type" content="profile">
+	<meta property="profile:first_name" content="Victor">
+	<meta property="profile:last_name" content="Lourng">
+	<meta property="profile:gender" content="male">
+	<!-- Face-libro (Happy 10th birthday!)-->
+	<meta property="fb:admins" content="100001604500510">
+	<!-- Joining the flock as a card-->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@lablayers">
+	<meta name="twitter:title" content="The Website of Victor Lourng">
+	<meta name="twitter:description" content="A high school student passionate about making things awesome. When he's not playing with his mouse, his inspiring and leading the way for innovation and great ideas.">
+	<meta name="twitter:creator" content="@lablayers">
+	<meta name="twitter:image:src" content="http://i.imgur.com/ZMWaYYE.jpg">
+	<meta name="twitter:domain" content="victorlourng.com">
+	<!-- Schemaz-->
+	<meta itemprop="name" content="Victor Lourng">
+	<meta itemprop="description" content="Victor Lourng is an awesome web unicorn based in Philadelphia.">
+	<meta name="description" content="Victor Lourng is an awesome web unicorn based in Philadelphia.">
+	<meta itemprop="image" content="http://lablayers.github.io/shutter/ava-coolio.png">
+	<!-- Pi(r^2) Me!-->
+	<meta name="googleplus" href="https://plus.google.com/+VictorLourng?rel=author">
+	<!-- Welcome home, robots! <3-->
+	<meta name="robots" content="allow">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" content="apple-touch-icon.png">
+	<meta name="msapplication-navbutton-color" content="#672F89">
+	<meta name="msapplication-tooltip" content="Victor Lourng">
+	<meta name="msapplication-TileColor" content="#672F89">
+	<meta name="msapplication-TileImage" content="apple-touch-icon.png">
+	<!-- I am a web app, Apple!-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<!-- This is where the real magic happens. -->
+	<link rel="stylesheet" href="design/build/production.css">
+	<link rel="stylesheet" href="icons/style.css">
 </head>
-<body>
+<body ng-app="victorIsAwesome">
+
+	<div ng-include='"templates/header.html"'></div>
+	<div ng-view></div>
+	<div ng-include='"templates/footer.html"'></div>
+
+	<!-- Also magic -->
+	<script src="/scripts/build/production.js"></script>
 </body>
 </html>
