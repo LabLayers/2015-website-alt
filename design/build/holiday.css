@@ -350,6 +350,6 @@
   text-align: center;
   padding-top: 0px;
 }
-#holiday-message span {
+#holiday-message span.string {
   opacity: 0.65;
 }
