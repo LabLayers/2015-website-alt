@@ -1,6 +1,8 @@
 @lightgray:		rgb(240,240,240);
 @gray:			#DDDDDD;
 @brown:			#9E6F51;
+
+@sky:			#012935;
 @land:			#0D544C;
 @evergreen:		#28AE4B; // #88C254;
 @glow:			yellow;
@@ -8,8 +10,10 @@
 @accent:		#8F4293; //#28AE4B;
 @santa:			#EE3837;
 
+@bounce:		cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 #holiday {
-	background: #012935;
+	background: @sky;
 	color: white;
 	text-align: center;
 	padding-top: 100px;
@@ -21,6 +25,7 @@
 		margin-top: -50px;
 		font-weight: normal;
 		line-height: 2em;
+		animation: fade-in-up 3s ease;
 	}
 	#snow {
 		display: block;
@@ -42,6 +47,9 @@
 		background-size: cover;
 		background-position: center bottom;
 		background-repeat: no-repeat;
+		transform-origin: bottom;
+		perspective: 0px;
+		animation: metropolis-appear 3s @bounce;
 	}
 	.ground {
 		position: absolute;
@@ -62,6 +70,7 @@
 		height: 90px;
 		display: block;
 		margin-top: 350px;
+		animation: bounce-platform 3s @bounce;
 	}
 	.tree {
 		position: absolute;
@@ -72,6 +81,7 @@
 		margin-left: -60px;
 		height: 192px;
 		transform: scale(1.5);
+		animation: bounce-tree 3s @bounce;
 		.star {
 			position: absolute;
 			top: -30px;
@@ -98,6 +108,7 @@
 				background: @glow;
 				opacity: 0.15;
 				transform: scale(1.25);
+				animation: star-halo 5s linear infinite;
 			}
 		}
 		.bark {
@@ -150,6 +161,7 @@
 		height: 200px;
 		border-bottom-left-radius: 40px 30px;
 		border-bottom-right-radius: 40px 30px;
+		animation: bounce-snowman 3s @bounce;
 		/* .body {
 			span:first-child {
 				width: 60px;
@@ -275,6 +287,7 @@
 		// margin-left: -45px;
 		left: auto!important;
 		right: 120px;
+		animation: bounce-santa 3s @bounce;
 		.hat {
 			background: @santa;
 			&:before {
@@ -367,7 +380,44 @@
 		}
 	}
 }
-
+@keyframes star-halo {
+  0%  {opacity: 0.18; transform: scale(1.25);}
+  25% {opacity: 0.1; transform: scale(1.20);}
+  50% {opacity: 0.15; transform: scale(1.35);}
+  60% {opacity: 0.10; transform: scale(1.25);}
+  70% {opacity: 0.25; transform: scale(1.35);}
+  80% {opacity: 0.10; transform: scale(1.20);}
+  100% {opacity: 0.18; transform: scale(1.25);}
+}
+@keyframes fade-in-up {
+  0%  {opacity: 0; transform: scale(0.75) translateY(20px);}
+  0% {opacity: 0; transform: scale(0.75) translateY(20px);}
+  10% {opacity: 1; transform: scale(1) translateY(0px);}
+}
+@keyframes metropolis-appear {
+  0%  {transform: rotateX(90deg);}
+  25% {transform: rotateX(0deg);}
+}
+@keyframes bounce-platform {
+	0%  {opacity: 0; transform: scale(0.75) translateY(-50px);}
+	0% {opacity: 0; transform: scale(0.75) translateY(-50px);}
+	25% {opacity: 1; transform: scale(1) translateY(0px);}
+}
+@keyframes bounce-snowman {
+	0%  {opacity: 0; transform: translateY(-80px);}
+	25% {opacity: 0; transform: translateY(-80px);}
+	50% {opacity: 1; transform: translateY(0px);}
+}
+@keyframes bounce-tree {
+	0%  {opacity: 0; transform: translateY(-125px) scale(1.75);}
+	30% {opacity: 0; transform: translateY(-125px) scale(1.75);}
+	55% {opacity: 1; transform: translateY(0px) scale(1.5);}
+}
+@keyframes bounce-santa {
+	0%  {opacity: 0; transform: translateY(-80px);}
+	35% {opacity: 0; transform: translateY(-80px);}
+	60% {opacity: 1; transform: translateY(0px);}
+}
 #holiday-message {
 	background: @land;
 	color: white;

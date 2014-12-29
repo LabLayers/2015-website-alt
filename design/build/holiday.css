@@ -12,6 +12,8 @@
   margin-top: -50px;
   font-weight: normal;
   line-height: 2em;
+  -webkit-animation: fade-in-up 3s ease;
+          animation: fade-in-up 3s ease;
 }
 #holiday #snow {
   display: block;
@@ -32,6 +34,13 @@
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-perspective: 0px;
+          perspective: 0px;
+  -webkit-animation: metropolis-appear 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation: metropolis-appear 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 #holiday .ground {
   position: absolute;
@@ -51,6 +60,8 @@
   height: 90px;
   display: block;
   margin-top: 350px;
+  -webkit-animation: bounce-platform 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation: bounce-platform 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 #holiday .tree {
   position: absolute;
@@ -59,7 +70,11 @@
   width: 120px;
   margin-left: -60px;
   height: 192px;
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-animation: bounce-tree 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation: bounce-tree 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 #holiday .tree .star {
   position: absolute;
@@ -87,7 +102,11 @@
   border-radius: 50%;
   background: #ffff00;
   opacity: 0.15;
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-animation: star-halo 5s linear infinite;
+          animation: star-halo 5s linear infinite;
 }
 #holiday .tree .bark {
   position: absolute;
@@ -134,6 +153,8 @@
   height: 200px;
   border-bottom-left-radius: 40px 30px;
   border-bottom-right-radius: 40px 30px;
+  -webkit-animation: bounce-snowman 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation: bounce-snowman 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* .body {
 			span:first-child {
 				width: 60px;
@@ -237,7 +258,9 @@
   height: 40px;
   border-radius: 12px;
   background: #8f4293;
-  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotate(-20deg);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 #holiday .snowman .buttons {
@@ -257,6 +280,8 @@
 #holiday .snowman.santa {
   left: auto!important;
   right: 120px;
+  -webkit-animation: bounce-santa 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation: bounce-santa 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 #holiday .snowman.santa .hat {
   background: #ee3837;
@@ -344,6 +369,270 @@
   height: 10px;
   background: #282828;
 }
+@-webkit-keyframes star-halo {
+  0% {
+    opacity: 0.18;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  25% {
+    opacity: 0.1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    opacity: 0.15;
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  60% {
+    opacity: 0.10;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  70% {
+    opacity: 0.25;
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  80% {
+    opacity: 0.10;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.18;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+@keyframes star-halo {
+  0% {
+    opacity: 0.18;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  25% {
+    opacity: 0.1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    opacity: 0.15;
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  60% {
+    opacity: 0.10;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  70% {
+    opacity: 0.25;
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  80% {
+    opacity: 0.10;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.18;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(20px);
+            transform: scale(0.75) translateY(20px);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(20px);
+            transform: scale(0.75) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(20px);
+            transform: scale(0.75) translateY(20px);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(20px);
+            transform: scale(0.75) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+@-webkit-keyframes metropolis-appear {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  25% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@keyframes metropolis-appear {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  25% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes bounce-platform {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(-50px);
+            transform: scale(0.75) translateY(-50px);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(-50px);
+            transform: scale(0.75) translateY(-50px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+@keyframes bounce-platform {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(-50px);
+            transform: scale(0.75) translateY(-50px);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.75) translateY(-50px);
+            transform: scale(0.75) translateY(-50px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+@-webkit-keyframes bounce-snowman {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes bounce-snowman {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@-webkit-keyframes bounce-tree {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-125px) scale(1.75);
+            transform: translateY(-125px) scale(1.75);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(-125px) scale(1.75);
+            transform: translateY(-125px) scale(1.75);
+  }
+  55% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1.5);
+            transform: translateY(0px) scale(1.5);
+  }
+}
+@keyframes bounce-tree {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-125px) scale(1.75);
+            transform: translateY(-125px) scale(1.75);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(-125px) scale(1.75);
+            transform: translateY(-125px) scale(1.75);
+  }
+  55% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1.5);
+            transform: translateY(0px) scale(1.5);
+  }
+}
+@-webkit-keyframes bounce-santa {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  35% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes bounce-santa {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  35% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 #holiday-message {
   background: #0d544c;
   color: white;
@@ -356,6 +645,7 @@
 .tweetit {
   position: relative;
   background-color: #eee;
+  background-image: -webkit-linear-gradient(#ffffff, #dedede);
   background-image: linear-gradient(#ffffff, #dedede);
   border: #ccc solid 1px;
   border-radius: 3px;
