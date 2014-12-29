@@ -1773,10 +1773,22 @@ footer#classic p {
     box-sizing: border-box;
   }
   h1 {
-    font-size: 48px;
+    font-size: 48px!important;
   }
   h2 {
-    font-size: 36px;
+    font-size: 36px!important;
+  }
+  nav#neue menu.right {
+    display: none;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .right {
+    float: none;
+  }
+  footer .clicky {
+    display: block!important;
   }
 }
 @media (max-width: 1136px) and (min-width: 1136px) {
